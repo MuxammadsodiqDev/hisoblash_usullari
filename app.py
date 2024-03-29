@@ -135,7 +135,7 @@ if st.button('Barchasini hisoblash'):
                         a1 = c
                 st.write("1. x= ",c)
             except:
-                st.write('x=yechim mavjud emas!')
+                st.write('1. x=yechim mavjud emas!')
 
             try:
                 #Vatarlar yordamida hisoblash usuli
@@ -153,7 +153,7 @@ if st.button('Barchasini hisoblash'):
                     xn=xi-(calculate_function(func,xi)*(consta-xi))/(calculate_function(func,consta)-calculate_function(func,xi))
                 st.write('2. x=',xn)
             except:
-                st.write('x=yechim mavjud emas!')
+                st.write('2. x=yechim mavjud emas!')
             try:    
                 #Urunmalar yordamida hisoblash usuli
                 a3=a
@@ -168,7 +168,7 @@ if st.button('Barchasini hisoblash'):
                     xn=xi-calculate_function(func,xi)/calculate_function(func1,xi)
                 st.write('3. x=',xn)
             except:
-                st.write('x=yechim mavjud emas!')
+                st.write('3. x=yechim mavjud emas!')
 
             try:
                 #Urunma (modifiqatsiyasi) yordamida hisoblash usuli
@@ -185,6 +185,6 @@ if st.button('Barchasini hisoblash'):
                     xn=xi-calculate_function(func,xi)/calculate_function(func1,x0)
                 st.write('4. x=',xn)
             except:
-                st.write('x=yechim mavjud emas!')
+                st.write('4. x=yechim mavjud emas!')
     except:
         st.write('Funksiya mavjud emas!')
