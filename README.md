@@ -1,0 +1,1 @@
+# hisoblash_usullari_2
