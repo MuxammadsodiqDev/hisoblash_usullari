@@ -10,8 +10,9 @@ st.markdown("<h1 style='color: green;'>HISOBLASH USULLARI</h1>", unsafe_allow_ht
 if st.button("Funksiya kiritish qo'llanmasi"):
     st.write("1. ayirish: -  ,qo'shish: +  ,ko'paytrish: *, bo'lish: /")
     st.write("2. daraja ko'tarish,  ** ,ildiz hisoblash: **(1/n)")
-    st.write("3. logarifmik funksiyalar: log(x),log10(x)... ; e^x - e(x); π - pi  ")
+    st.write("3. logarifmik funksiyalar: log(x),log10(x)... ")
     st.write('4. triginametrik funksiyalar: sin(x),cos(x),tan(x) ...')
+    st.write('e^x - e(x); π - pi ')
 
 #Berilgan funksiyani hisobberuvchi function
 def calculate_function(expression, x_value):
