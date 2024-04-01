@@ -46,6 +46,8 @@ if st.button('Funksiya grafigi'):
                             xaxis_title='x',
                             yaxis_title='y')
             st.plotly_chart(fig)
+        else:
+            error
     except:
         st.write('Malumotlar hato kiritilgan!')
 
