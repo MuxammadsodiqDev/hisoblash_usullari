@@ -34,17 +34,18 @@ b = st.number_input("oraliqni oxirgi qiymati: ")
 #Funksiyani grafigi chizish
 if st.button('Funksiya grafigi'):
     try:
-        x_values = np.arange(a, b, ϵ)
-        y_values = [calculate_function(func, x) for x in x_values]
-        y=0/x_values
-
-        fig = go.Figure()
-        fig.add_trace(go.Scatter(x=x_values, y=y_values, mode='lines',line=dict(color="green"), name='funksiya'))
-        fig.add_trace(go.Scatter(x=x_values, y=y, mode='lines',line=dict(color='red'),name='X oqi'))
-        fig.update_layout(title=f'funksiya: {func}',
-                        xaxis_title='x',
-                        yaxis_title='y')
-        st.plotly_chart(fig)
+        if calculate_function(func, x):
+            x_values = np.arange(a, b, ϵ)
+            y_values = [calculate_function(func, x) for x in x_values]
+            y=0/x_values
+    
+            fig = go.Figure()
+            fig.add_trace(go.Scatter(x=x_values, y=y_values, mode='lines',line=dict(color="green"), name='funksiya'))
+            fig.add_trace(go.Scatter(x=x_values, y=y, mode='lines',line=dict(color='red'),name='X oqi'))
+            fig.update_layout(title=f'funksiya: {func}',
+                            xaxis_title='x',
+                            yaxis_title='y')
+            st.plotly_chart(fig)
     except:
         st.write('Malumotlar hato kiritilgan!')
 
