@@ -34,7 +34,7 @@ b = st.number_input("oraliqni oxirgi qiymati: ")
 #Funksiyani grafigi chizish
 if st.button('Funksiya grafigi'):
     try:
-        if func and a and b and ϵ:
+        if func:
             x_values = np.arange(a, b, ϵ)
             y_values = [calculate_function(func, x) for x in x_values]
             y=0/x_values
