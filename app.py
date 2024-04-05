@@ -38,11 +38,13 @@ if st.button('Funksiya grafigi'):
     try:
         if func:
             x_values = np.arange(a, b, ϵ)
-            y_values = [calculate_function(func, x) for x in x_values]
+            if calculate_function(func, x):
+                y_values = [calculate_function(func, x) for x in x_values]
             y=0/x_values
     
             fig = go.Figure()
             fig.add_trace(go.Scatter(x=x_values, y=y_values, mode='lines',line=dict(color="green"), name='funksiya'))
+            
             fig.add_trace(go.Scatter(x=x_values, y=y, mode='lines',line=dict(color='red'),name='X oqi'))
             fig.update_layout(title=f'funksiya: {func}',
                             xaxis_title='x',
