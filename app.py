@@ -17,8 +17,10 @@ if st.button("Funksiya kiritish qo'llanmasi"):
 #Berilgan funksiyani hisobberuvchi function
 def calculate_function(expression, x_value):
     try:
-        result = eval(expression, {'__builtins__': None}, {'x': x_value, 'sin': math.sin, 'cos': math.cos, 'tan': math.tan, 'e': math.exp, 'log': math.log})
-        return result
+        if list(expression) in x:
+            result = eval(expression, {'__builtins__': None}, {'x': x_value, 'sin': math.sin, 'cos': math.cos, 'tan': math.tan, 'e': math.exp, 'log': math.log})
+            return result
+        
     except Exception as e:
         return str(e)
 
