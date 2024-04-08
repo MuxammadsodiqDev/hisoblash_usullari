@@ -57,7 +57,10 @@ if st.button('1.Kesmani teng ikkiga bo\'lish usuli'):
     try:
         if calculate_function(func,a)*calculate_function(func,b)<0:
             # Iterativ yechim topish
-            while abs(a - b) > ϵ :
+            max_itaratsiya=100
+            itaratsiya=0
+        
+            while abs(a - b) > ϵ and itaratsiya<max_itaratsiya:
                 c = (a + b) / 2
                 if calculate_function(func,c) == 0:
                     break
@@ -65,8 +68,9 @@ if st.button('1.Kesmani teng ikkiga bo\'lish usuli'):
                     b = c
                 else:
                     a = c
-            
+                itaratsiya+=1
             st.write('x=',c)
+            st.write(itaratsiya)
     except:
         st.write('x=yechim mavjud emas!')
                     
