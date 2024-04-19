@@ -110,9 +110,9 @@ if st.button('2.Vatarlar usuli'):
             while abs(xn-xi)>ϵ and itaratsiya1<max_itaratsiya1:
                 xi=xn
                 xn=xi-(calculate_function(func,xi)*(consta-xi))/(calculate_function(func,consta)-calculate_function(func,xi))
-                itaratsiya+=1
+                itaratsiya1+=1
             st.write('x=',xn)
-            st.write('itaratsiya= ',itaratsiya)
+            st.write('itaratsiya= ',itaratsiya1)
     except:
         st.write('x=yechim mavjud emas!')
         
