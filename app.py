@@ -87,7 +87,7 @@ if st.button('1.Kesmani teng ikkiga bo\'lish usuli'):
                     a = c
                 itaratsiya+=1
             st.write('x=',c)
-            st.write(itaratsiya)
+            st.write('itaratsiya= ',itaratsiya)
     except:
         st.write('x=yechim mavjud emas!')
                     
@@ -97,8 +97,8 @@ if st.button('2.Vatarlar usuli'):
     try:
         if calculate_function(func,a)*calculate_function(func,b)<0:
             #itarativ yechim topish
-            max_itaratsiya=100
-            itaratsiya=0
+            max_itaratsiya1=100
+            itaratsiya1=0
         
             if calculate_function(func,a)*calculate_function(func2,a)>0:
                 consta=a
@@ -107,12 +107,12 @@ if st.button('2.Vatarlar usuli'):
                 consta=b
                 xi=a
             xn=xi-(calculate_function(func,xi)*(consta-xi))/(calculate_function(func,consta)-calculate_function(func,xi))
-            while abs(xn-xi)>ϵ and itaratsiya<max_itaratsiya:
+            while abs(xn-xi)>ϵ and itaratsiya1<max_itaratsiya1:
                 xi=xn
                 xn=xi-(calculate_function(func,xi)*(consta-xi))/(calculate_function(func,consta)-calculate_function(func,xi))
                 itaratsiya+=1
             st.write('x=',xn)
-            st.write('itaratsiya',itaratsiya)
+            st.write('itaratsiya= ',itaratsiya)
     except:
         st.write('x=yechim mavjud emas!')
         
@@ -121,15 +121,15 @@ if st.button('3.Urunma usuli'):
     try:
         if calculate_function(func,a)*calculate_function(func,b)<0:
             #itaratsiyaviy yechim topish
-            max_itaratsiya=100
-            itaratsiya=0
+            max_itaratsiya2=100
+            itaratsiya2=0
             
             if calculate_function(func,a)*calculate_function(func2,a)>0:
                 xi=a
             else:
                 xi=b
             xn=xi-calculate_function(func,xi)/calculate_function(func1,xi)
-            while abs(xn-xi)>ϵ and itaratsiy<max_itaratsiya:
+            while abs(xn-xi)>ϵ and itaratsiy2<max_itaratsiya2:
                 xi=xn
                 xn=xi-calculate_function(func,xi)/calculate_function(func1,xi)
                 itaratsiya+=1
@@ -142,16 +142,22 @@ if st.button('3.Urunma usuli'):
 if st.button('4.Urunma (modifiqatsiya) usuli'):
     try:
         if calculate_function(func,a)*calculate_function(func,b)<0:
+            #itaratsaviy yechim topish
+            max_itaratsiya3=100
+            itaratsiya3=0
+            
             if calculate_function(func,a)*calculate_function(func2,a)>0:
                 xi=a
             else:
                 xi=b
             x0=xi
             xn=xi-calculate_function(func,xi)/calculate_function(func1,x0)
-            while abs(xn-xi)>ϵ:
+            while abs(xn-xi)>ϵ and itaratsiya3<max_itaratsiya3:
                 xi=xn
                 xn=xi-calculate_function(func,xi)/calculate_function(func1,x0)
+                itaratsiya+=1
             st.write('x=',xn)
+            st.write('itaratsiya',itaratsiya)
     except:
         st.write('x=yechim mavjud emas!')
         
