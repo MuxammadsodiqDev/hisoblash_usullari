@@ -17,6 +17,7 @@ if st.button("Funksiya kiritish qo'llanmasi"):
 #Berilgan funksiyani hisobberuvchi function
 def calculate_function(expression, x_value):
     try:
+        
         result = eval(expression, {'__builtins__': None}, 
                                                           {'x': x_value, 
                                                            'e': math.exp,'pi':mat.pi,
@@ -95,6 +96,10 @@ if st.button('1.Kesmani teng ikkiga bo\'lish usuli'):
 if st.button('2.Vatarlar usuli'):
     try:
         if calculate_function(func,a)*calculate_function(func,b)<0:
+            #itarativ yechim topish
+            max_itaratsiya=100
+            itaratsiya=0
+        
             if calculate_function(func,a)*calculate_function(func2,a)>0:
                 consta=a
                 xi=b
@@ -102,10 +107,12 @@ if st.button('2.Vatarlar usuli'):
                 consta=b
                 xi=a
             xn=xi-(calculate_function(func,xi)*(consta-xi))/(calculate_function(func,consta)-calculate_function(func,xi))
-            while abs(xn-xi)>ϵ:
+            while abs(xn-xi)>ϵ and itaratsiya<max_itaratsiya:
                 xi=xn
                 xn=xi-(calculate_function(func,xi)*(consta-xi))/(calculate_function(func,consta)-calculate_function(func,xi))
-            st.write('x=',xn)        
+                itaratsiya+=1
+            st.write('x=',xn)
+            st.write('itaratsiya',itaratsiya)
     except:
         st.write('x=yechim mavjud emas!')
         
@@ -113,15 +120,21 @@ if st.button('2.Vatarlar usuli'):
 if st.button('3.Urunma usuli'):
     try:
         if calculate_function(func,a)*calculate_function(func,b)<0:
+            #itaratsiyaviy yechim topish
+            max_itaratsiya=100
+            itaratsiya=0
+            
             if calculate_function(func,a)*calculate_function(func2,a)>0:
                 xi=a
             else:
                 xi=b
             xn=xi-calculate_function(func,xi)/calculate_function(func1,xi)
-            while abs(xn-xi)>ϵ:
+            while abs(xn-xi)>ϵ and itaratsiy<max_itaratsiya:
                 xi=xn
                 xn=xi-calculate_function(func,xi)/calculate_function(func1,xi)
+                itaratsiya+=1
             st.write('x=',xn)       
+            st.write('itaratsiya',itaratsiya)
     except:
         st.write('x=yechim mavjud emas!')
         
