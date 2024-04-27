@@ -62,11 +62,9 @@ if st.button('Funksiya grafigi'):
             fig.add_trace(go.Scatter(x=x_values, y=y, mode='lines',line=dict(color='red'),name='X oqi'))
             fig.update_layout(title=f'funksiya: {func}',
                       xaxis_title='x',
-                      yaxis_title='y',
-                      shapes=[
-                          dict(type="line", x0=min(x_values), y0=0, x1=max(x_values), y1=0, line=dict(color="red", width=1)),
-                          dict(type="line", x0=0, y0=min(y_values), x1=0, y1=max(y_values), line=dict(color="blue", width=1))
-                      ])
+                      yaxis_title='y')
+                     
+            fig.add_shape(type="line", x0=x, y0=min(y_values), x1=x, y1=max(y_values), line=dict(color="blue", width=1))
             st.plotly_chart(fig)
         else:
             error
