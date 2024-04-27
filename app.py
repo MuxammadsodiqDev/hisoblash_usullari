@@ -65,9 +65,9 @@ if st.button('Funksiya grafigi'):
                             yaxis_title='y')
             xaxis=dict(range=[x_min, x_max]),
             yaxis=dict(range=[y_min, y_max]),
-            shapes=(
+            shapes=[
                 dict(type="line", x0=x_min, y0=0, x1=x_max, y1=0, line=dict(color="red", width=2)),
-                dict(type="line", x0=0, y0=y_min, x1=0, y1=y_max, line=dict(color="blue", width=2)))
+                dict(type="line", x0=0, y0=y_min, x1=0, y1=y_max, line=dict(color="blue", width=2))]
             st.plotly_chart(fig)
         else:
             error
