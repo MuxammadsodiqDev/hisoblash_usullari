@@ -64,7 +64,7 @@ if st.button('Funksiya grafigi'):
                       xaxis_title='x',
                       yaxis_title='y')
             for x in np.arange(min(x_values), max(x_values), step=1):  # Vertikal chiziq uchun
-                fig.add_shape(type="line", x0=x, y0=min(y_values), x1=x, y1=max(y_values), line=dict(color="grey", width=1))
+                fig.add_shape(type="line", x0=x, y0=min(y_values), x1=x, y1=max(y_values), line=dict(color="grey", width=0.5))
             st.plotly_chart(fig)
         else:
             error
