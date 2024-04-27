@@ -63,8 +63,8 @@ if st.button('Funksiya grafigi'):
             fig.update_layout(title=f'funksiya: {func}',
                       xaxis_title='x',
                       yaxis_title='y')
-                     
-            fig.add_shape(type="line", x0=x, y0=min(y_values), x1=x, y1=max(y_values), line=dict(color="blue", width=1))
+            for x in np.arange(min(x_values), max(x_values), step=1):  # Vertikal chiziq uchun
+                fig.add_shape(type="line", x0=x, y0=min(y_values), x1=x, y1=max(y_values), line=dict(color="blue", width=1))
             st.plotly_chart(fig)
         else:
             error
