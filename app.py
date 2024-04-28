@@ -24,7 +24,7 @@ def calculate_function(expression, x_value):
                                                            'sin': math.sin, 'arcsin': math.asin,'sh': math.sinh, 'arcsh': math.asinh,
                                                            'cos': math.cos,  'arccos': math.acos,'ch': math.cosh,'arcch': math.acosh,
                                                            'tan': math.tan,  'arctan': math.atan, 'th': math.tanh, 'arcth': math.atanh,
-                                                           'log': math.log, 'log2':math.log2,'log3': math.log/math.log(3),'log4': math.log/math.log(4),'log5': math.log/math.log(5),
+                                                           'log': math.log, 'log2':math.log/math.log(2),'log3': math.log/math.log(3),'log4': math.log/math.log(4),'log5': math.log/math.log(5),
                                                            'log6': math.log/math.log(6),'log7': math.log/math.log(7),'log8': math.log/math.log(8),'log9': math.log/math.log(9),'log10': math.log/math.log(10)
                                                            
                       })
