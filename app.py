@@ -17,14 +17,13 @@ if st.button("Funksiya kiritish qo'llanmasi"):
 #Berilgan funksiyani hisobberuvchi function
 def calculate_function(expression, x_value):
     try:
-        
         result = eval(expression, {'__builtins__': None}, 
                                                           {'x': x_value, 
                                                            'e': math.exp,'pi':math.pi,
                                                            'sin': math.sin, 'arcsin': math.asin,'sh': math.sinh, 'arcsh': math.asinh,
                                                            'cos': math.cos,  'arccos': math.acos,'ch': math.cosh,'arcch': math.acosh,
                                                            'tan': math.tan,  'arctan': math.atan, 'th': math.tanh, 'arcth': math.atanh,
-                                                           'ln': math.log, 'log2': lambda x: math.log(x, 2),'log3': math.log(3),'log4':math.log(4),'log5': math.log(5),
+                                                           'ln': math.log, 'log2': lambda x: math.log(x, 2),'log': lambda x: math.log(x, n):math.log(4),'log5': math.log(5),
                                                            'log6': math.log(6),'log7': math.log(7),'log8': math.log(8),'log9': math.log(9),'log10': math.log(10)
                                                            
                       })
