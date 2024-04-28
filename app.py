@@ -31,14 +31,6 @@ def calculate_function(expression, x_value):
     except Exception as e:
         return str(e)
 
-def calculate_function(expression, x_value):
-    try:
-        result = eval(expression, {'__builtins__': None}, {'x': x_value, 'sin': math.sin, 'cos': math.cos, 'tan': math.tan, 'e': math.exp, 'log': math.log})
-        return result
-        
-    except Exception as e:
-        return str(e)
-        
 #Foydalanuvchi tamonidan kiritilishi kerak
 func = st.text_input("Funksiya: ","x**2-9")
 func1 = st.text_input("Funksiyaning 1-tartibli hosilasi: ","2*x")
