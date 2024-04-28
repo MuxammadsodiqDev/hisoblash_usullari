@@ -64,7 +64,7 @@ if st.button('Funksiya grafigi'):
                       xaxis_title='x',
                       yaxis_title='y',
                       xaxis_showgrid=True,
-                      yaxis_showgrid=False)
+                      yaxis_showgrid=True)
             
             st.plotly_chart(fig)
         else:
