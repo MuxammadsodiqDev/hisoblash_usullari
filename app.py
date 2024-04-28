@@ -62,9 +62,10 @@ if st.button('Funksiya grafigi'):
             fig.add_trace(go.Scatter(x=x_values, y=y, mode='lines',line=dict(color='red'),name='X oqi'))
             fig.update_layout(title=f'funksiya: {func}',
                       xaxis_title='x',
-                      yaxis_title='y')
-            for x in np.arange(min(x_values), max(x_values), step=1):  # Vertikal chiziq uchun
-                fig.add_shape(type="line", x0=x, y0=min(y_values), x1=x, y1=max(y_values), line=dict(color="grey", width=0.5))
+                      yaxis_title='y',
+                      xaxis_showgrid=True,
+                      yaxis_showgrid=False)
+            
             st.plotly_chart(fig)
         else:
             error
