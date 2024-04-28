@@ -24,7 +24,7 @@ def calculate_function(expression, x_value):
                                                            'cos': math.cos,  'arccos': math.acos,'ch': math.cosh,'arcch': math.acosh,
                                                            'tan': math.tan,  'arctan': math.atan, 'th': math.tanh, 'arcth': math.atanh,
                                                            'ln': math.log, 'log2': lambda x: math.log(x, 2),'log': lambda x: math.log(x, n):math.log(4),'log5': math.log(5),
-                                                           'log6': math.log(6),'log7': math.log(7),'log8': math.log(8),'log9': math.log(9),'log10': math.log(10)
+                                                           'log6': math.log(6),'log7': math.log(7),'log8': math.log(8),'log9': math.log(9),'lg': math.log(10)
                                                            
                       })
         return result
