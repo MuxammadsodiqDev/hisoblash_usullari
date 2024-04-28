@@ -20,7 +20,7 @@ def calculate_function(expression, x_value):
         
         result = eval(expression, {'__builtins__': None}, 
                                                           {'x': x_value, 
-                                                           'e': math.exp,'pi':mat.pi,
+                                                           'e': math.exp,'pi':math.pi,
                                                            'sin': math.sin, 'arcsin': math.asin,'sh': math.sinh, 'arcsh': math.asinh,
                                                            'cos': math.cos,  'arccos': math.acos,'ch': math.cosh,'arcch': math.acosh,
                                                            'tan': math.tan,  'arctan': math.atan, 'th': math.tanh, 'arcth': math.atanh
