@@ -34,13 +34,14 @@ def calculate_function(expression, x_value):
 
 #Foydalanuvchi tamonidan kiritilishi kerak
 func = st.text_input("Funksiya: ","x**2-9")
+a = st.number_input("oraliqni boshlang'ich qiymati: ")
+b = st.number_input("oraliqni oxirgi qiymati: ")
 
 
 #Funksiyani grafigi chizish
 if st.button('Funksiya grafigi'):
     try:
-            a = st.number_input("oraliqni boshlang'ich qiymati: ")
-            b = st.number_input("oraliqni oxirgi qiymati: ")
+            
             if func:
                 x_values = np.arange(a, b, 0.001)
                 y_values = [calculate_function(func, x) for x in x_values]
