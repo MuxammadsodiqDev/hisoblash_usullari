@@ -2,6 +2,7 @@ import streamlit as st
 import plotly.graph_objs as go
 import numpy as np
 import math 
+from streamlit_drawable_canvas import st_canvas
 
 #Asosiy matn
 st.markdown("<h1 style='color: green;'>HISOBLASH USULLARI</h1>", unsafe_allow_html=True)
