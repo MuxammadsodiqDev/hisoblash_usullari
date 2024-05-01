@@ -62,11 +62,9 @@ if st.button('Funksiya grafigi'):
     except:
         st.write('Malumotlar hato kiritilgan!')
 
+#Foydalanuvchi tamonidan kiritilishi kerak
 func1 = st.text_input("Funksiyaning 1-tartibli hosilasi: ","2*x")
 func2 = st.text_input("Funksiyaning 2-tartibli hosilasi: ","2")
-
-a = st.number_input("oraliqni boshlang'ich qiymati: ")
-b = st.number_input("oraliqni oxirgi qiymati: ")
 ϵ = st.number_input('hatolik: ')
 
 #Funksiyani grafigi chizish
