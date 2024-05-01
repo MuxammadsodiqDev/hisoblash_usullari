@@ -67,29 +67,6 @@ func1 = st.text_input("Funksiyaning 1-tartibli hosilasi: ","2*x")
 func2 = st.text_input("Funksiyaning 2-tartibli hosilasi: ","2")
 ϵ = st.number_input('hatolik: ')
 
-#Funksiyani grafigi chizish
-if st.button('Funksiya grafigi'):
-    try:
-        if func:
-            x_values = np.arange(a, b, 0.001)
-            y_values = [calculate_function(func, x) for x in x_values]
-            y=0/x_values
-    
-            fig = go.Figure()
-            fig.add_trace(go.Scatter(x=x_values, y=y_values, mode='lines',line=dict(color="green"), name='funksiya'))
-            fig.add_trace(go.Scatter(x=x_values, y=y, mode='lines',line=dict(color='red'),name='X oqi'))
-            fig.update_layout(title=f'funksiya: {func}',
-                      xaxis_title='x',
-                      yaxis_title='y',
-                      xaxis_showgrid=True,
-                      yaxis_showgrid=True)
-            
-            st.plotly_chart(fig)
-        else:
-            error
-    except:
-        st.write('Malumotlar hato kiritilgan!')
-
 #Kesmani teng ikkiga bo'lish usuli
 if st.button('1.Kesmani teng ikkiga bo\'lish usuli'):
     try:
