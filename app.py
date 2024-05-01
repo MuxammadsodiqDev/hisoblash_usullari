@@ -15,18 +15,7 @@ if st.button("Funksiya kiritish qo'llanmasi"):
     st.write('4. triginametrik funksiyalar: sin(x),cos(x),tan(x),arcsin(x)..., sh(x)... -> (kamchilik cotangens ni 1/tangens orqali kiritiladi)')
     st.write('5. e^x - e**(x); π - pi ')
 
-canvas_result = st_canvas(
-    fill_color="rgba(255, 165, 0, 0.3)",  # Fixed fill color with some opacity
-    stroke_width=stroke_width,
-    stroke_color=stroke_color,
-    background_color=bg_color,
-    background_image=Image.open(bg_image) if bg_image else None,
-    update_streamlit=realtime_update,
-    height=150,
-    drawing_mode=drawing_mode,
-    point_display_radius=point_display_radius if drawing_mode == 'point' else 0,
-    key="canvas",
-)
+
 #Berilgan funksiyani hisobberuvchi function
 def calculate_function(expression, x_value):
     try:
