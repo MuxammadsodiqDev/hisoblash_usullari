@@ -8,22 +8,22 @@ st.markdown("<h1 style='color: green;'>HISOBLASH USULLARI</h1>", unsafe_allow_ht
 
 #Funksiya kiritish qo'llanma
 if st.button("Funksiya kiritish qo'llanmasi"):
-    st.write("1. (ayirish: -)  ,qo'shish: +  ,ko'paytrish: *, bo'lish: /")
-    st.write("2. daraja ko'tarish,  ** ,ildiz hisoblash: **(1/n)")
-    st.write("3. logarifmik funksiyalar: ln(x),log(x,n)... ")
-    st.write('4. triginametrik funksiyalar: sin(x),cos(x),tan(x) ...')
-    st.write('5. e^x - e(x); π - pi ')
+    st.write("1. (ayirish -> -), (qo'shish -> +), (ko'paytrish -> *), bo'lish -> /")
+    st.write("2. daraja ko'tarish -> **(n)  ,ildiz hisoblash -> **(1/n), (bu yerda 1/n soni -n inchi darajasi)")
+    st.write("3. logarifmik funksiyalar: ln(x),log(x,n)... -> (bu yerda n logarifm asosi) ")
+    st.write('4. triginametrik funksiyalar: sin(x),cos(x),tan(x),arcsin(x)..., sh(x)... -> (kamchilik cotangens ni 1/tangens orqali kiritiladi)')
+    st.write('5. e^x - e**(x); π - pi ')
 
 #Berilgan funksiyani hisobberuvchi function
 def calculate_function(expression, x_value):
     try:
         result = eval(expression, {'__builtins__': None}, 
                                                           {'x': x_value, 
-                                                           'e': math.exp,'pi':math.pi,
+                                                           'e**': math.exp,'pi':math.pi,
                                                            'sin': math.sin, 'arcsin': math.asin,'sh': math.sinh, 'arcsh': math.asinh,
                                                            'cos': math.cos,  'arccos': math.acos,'ch': math.cosh,'arcch': math.acosh,
                                                            'tan': math.tan,  'arctan': math.atan, 'th': math.tanh, 'arcth': math.atanh,
-                                                           'ln': math.log,'^': lambda x:math.pow(x),"log":math.log
+                                                           'ln': math.log,"log":math.log
                                                            
                       })
         return result
