@@ -89,8 +89,8 @@ if st.button('1.Kesmani teng ikkiga bo\'lish usuli'):
                     a = c
                 itaratsiya+=1
                 itaratsiya_list.append(itaratsiya)
-            st.write(x_list)
-            st.write(itaratsiya_list)
+            st.write(np.sum(x_list))
+            st.write(np.sum(itaratsiya_list))
             
             
             st.write('x=',c)
