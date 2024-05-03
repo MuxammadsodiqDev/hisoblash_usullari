@@ -76,9 +76,11 @@ if st.button('1.Kesmani teng ikkiga bo\'lish usuli'):
             # Iterativ yechim topish
             max_itaratsiya=100
             itaratsiya=0
-        
+            c_list=[]
+            itaratsiya_list=[]
             while abs(a - b) > ϵ and itaratsiya<max_itaratsiya:
                 c = (a + b) / 2
+                c_list.append(c)
                 if calculate_function(func,c) == 0:
                     break
                 elif calculate_function(func,c) * calculate_function(func,a) < 0:
@@ -86,6 +88,10 @@ if st.button('1.Kesmani teng ikkiga bo\'lish usuli'):
                 else:
                     a = c
                 itaratsiya+=1
+                itaratsiya_list.append(itaratsiya)
+            fig = px.bar(x=x, y=y, title='Misol Barplot', labels={'x': 'X o\'qli o\'lar', 'y': 'Y o\'qli o\'lar'})
+            fig.show()
+            
             st.write('x=',c)
             st.write('itaratsiya= ',itaratsiya)
     except:
