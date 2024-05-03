@@ -97,7 +97,7 @@ if st.button('1.Kesmani teng ikkiga bo\'lish usuli'):
             st.write('itaratsiya= ',itaratsiya)
             if len(itaratsiya_list)==len(c_list):
                 fig = go.Figure(data=[go.Bar(x=itaratsiya_list, y=c_list,marker_color="green")])
-                fig.update_layout(title='x va itaratsiya', xaxis_title="itaratsiyalar", yaxis_title="x",color='green')
+                fig.update_layout(title='x va itaratsiya', xaxis_title="itaratsiyalar", yaxis_title="x")
                 st.plotly_chart(fig)
             else:
                 st.write('hato')
