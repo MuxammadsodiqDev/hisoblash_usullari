@@ -143,17 +143,21 @@ if st.button('2.Vatarlar usuli'):
         st.write('x=yechim mavjud emas!')
         
 #Urunmalar yordamida hisoblash usuli
+x_list=[]
+itaratsiya_list=[]
 if st.button('3.Urunma usuli'):
     try:
         if calculate_function(func,a)*calculate_function(func,b)<0:
             #itaratsiyaviy yechim topish
             max_itaratsiya2=100
-            itaratsiya2=0
+            itaratsiya2=1
             
             if calculate_function(func,a)*calculate_function(func2,a)>0:
                 xi=a
             else:
                 xi=b
+            x_list.append(xi)
+            itaratsiya_list.append(1)
             xn=xi-calculate_function(func,xi)/calculate_function(func1,xi)
             while abs(xn-xi)>ϵ and itaratsiya2<max_itaratsiya2:
                 xi=xn
@@ -161,6 +165,13 @@ if st.button('3.Urunma usuli'):
                 itaratsiya2+=1
             st.write('x=',xn)       
             st.write('itaratsiya',itaratsiya2)
+
+            if len(itaratsiya_list)==len(x_list):
+                fig = go.Figure(data=[go.Bar(x=itaratsiya_list, y=x_list,marker_color="green")])
+                fig.update_layout(xaxis_title="itaratsiyalar", yaxis_title="x")
+                st.plotly_chart(fig)
+            else:
+                st.write("hato")   
     except:
         st.write('x=yechim mavjud emas!')
         
