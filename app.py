@@ -34,8 +34,8 @@ def calculate_function(expression, x_value):
 
 #Foydalanuvchi tamonidan kiritilishi kerak
 func = st.text_input("Funksiya: ","x**2-9")
-min = st.number_input("min: ","-100")
-max = st.number_input("max: ",100)
+min = st.number_input("min: ")
+max = st.number_input("max: ")
 
 
 #Funksiyani grafigi chizish
