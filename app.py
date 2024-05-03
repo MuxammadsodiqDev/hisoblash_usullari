@@ -89,7 +89,9 @@ if st.button('1.Kesmani teng ikkiga bo\'lish usuli'):
                     a = c
                 itaratsiya+=1
                 itaratsiya_list.append(itaratsiya)
-            fig = px.bar(x=itaratsiya_list, y=c_list, title='Misol Barplot', labels={'x': 'X o\'qli o\'lar', 'y': 'Y o\'qli o\'lar'})
+                
+            fig = go.Figure(data=[go.Bar(x=itaratsiya_list, y=c_list)])
+            fig.update_layout(title='', xaxis_title="itaratsiyalar", yaxis_title="x")
             fig.show()
             
             st.write('x=',c)
