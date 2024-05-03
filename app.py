@@ -113,7 +113,7 @@ if st.button('2.Vatarlar usuli'):
         if calculate_function(func,a)*calculate_function(func,b)<0:
             #itarativ yechim topish
             max_itaratsiya1=100
-            itaratsiya1=0
+            itaratsiya1=1
         
             if calculate_function(func,a)*calculate_function(func2,a)>0:
                 consta=a
@@ -122,13 +122,14 @@ if st.button('2.Vatarlar usuli'):
                 consta=b
                 xi=a
             x_list.append(xi)
+            itaratsiya_list.append(1)
             xn=xi-(calculate_function(func,xi)*(consta-xi))/(calculate_function(func,consta)-calculate_function(func,xi))
             while abs(xn-xi)>ϵ and itaratsiya1<max_itaratsiya1:
                 xi=xn
                 x_list.append(xi)
                 xn=xi-(calculate_function(func,xi)*(consta-xi))/(calculate_function(func,consta)-calculate_function(func,xi))
                 itaratsiya1+=1
-                itaratsiya_list.append(itaratsiya1+1)
+                itaratsiya_list.append(itaratsiya1)
             st.write('x=',xn)
             st.write('itaratsiya= ',itaratsiya1)
 
