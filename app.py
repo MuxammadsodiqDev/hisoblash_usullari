@@ -163,7 +163,7 @@ if st.button('3.Urunma usuli'):
                 xi=xn
                 xn=xi-calculate_function(func,xi)/calculate_function(func1,xi)
                 itaratsiya2+=1
-                itaratsiya_list.append(itaratsiya1)
+                itaratsiya_list.append(itaratsiya2)
                 
             st.write('x=',xn)       
             st.write('itaratsiya',itaratsiya2)
