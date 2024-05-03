@@ -34,7 +34,7 @@ def calculate_function(expression, x_value):
 
 #Foydalanuvchi tamonidan kiritilishi kerak
 func = st.text_input("Funksiya: ","x**2-9")
-min = st.number_input("min: ",-100)
+min = st.number_input("min: ","-100")
 max = st.number_input("max: ",100)
 
 
@@ -63,8 +63,8 @@ if st.button('Funksiya grafigi'):
         st.write('Malumotlar hato kiritilgan!')
 
 #Foydalanuvchi tamonidan kiritilishi kerak
-func1 = st.text_input("Funksiyaning 1-tartibli hosilasi: ","2*x")
-func2 = st.text_input("Funksiyaning 2-tartibli hosilasi: ","2")
+func1 = st.text_input("f': ","2*x")
+func2 = st.text_input("f": ","2")
 ϵ = st.number_input('hatolik: ')
 
 #Kesmani teng ikkiga bo'lish usuli
