@@ -4,7 +4,7 @@ import numpy as np
 import math 
 
 #Asosiy matn
-st.markdown("<h1 style='color: green;'>HISOBLASH USULLARI</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='color: green;'>TAQRIBIY YECHISH</h1>", unsafe_allow_html=True)
 
 #Funksiya kiritish qo'llanma
 if st.button("Funksiya kiritish qo'llanmasi"):
@@ -34,8 +34,8 @@ def calculate_function(expression, x_value):
 
 #Foydalanuvchi tamonidan kiritilishi kerak
 func = st.text_input("Funksiya: ","x**2-9")
-a = st.number_input("oraliqni boshlang'ich qiymati: ")
-b = st.number_input("oraliqni oxirgi qiymati: ")
+min = st.number_input("min: ",-100)
+max = st.number_input("max: ",100)
 
 
 #Funksiyani grafigi chizish
