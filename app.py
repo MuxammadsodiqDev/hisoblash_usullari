@@ -132,12 +132,12 @@ if st.button('2.Vatarlar usuli'):
             st.write('x=',xn)
             st.write('itaratsiya= ',itaratsiya1)
 
-            if len(itaratsiya_list)==len(c_list):
-                fig = go.Figure(data=[go.Bar(x=itaratsiya_list, y=c_list,marker_color="green")])
+            if len(itaratsiya_list)==len(x_list):
+                fig = go.Figure(data=[go.Bar(x=itaratsiya_list, y=x_list,marker_color="green")])
                 fig.update_layout(xaxis_title="itaratsiyalar", yaxis_title="x")
                 st.plotly_chart(fig)
             else:
-                st.write('hato')
+                st.write("hato")
     except:
         st.write('x=yechim mavjud emas!')
         
