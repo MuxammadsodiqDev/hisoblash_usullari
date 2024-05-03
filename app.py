@@ -155,7 +155,7 @@ if st.button('3.Urunma usuli'):
             else:
                 xi=b
             xn=xi-calculate_function(func,xi)/calculate_function(func1,xi)
-            while abs(xn-xi)>ϵ and itaratsiy2<max_itaratsiya2:
+            while abs(xn-xi)>ϵ and itaratsiya2<max_itaratsiya2:
                 xi=xn
                 xn=xi-calculate_function(func,xi)/calculate_function(func1,xi)
                 itaratsiya+=1
