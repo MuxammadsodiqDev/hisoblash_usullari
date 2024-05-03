@@ -107,7 +107,7 @@ if st.button('1.Kesmani teng ikkiga bo\'lish usuli'):
 
 #Vatarlar yordamida hisoblash usuli
 x_list=[]
-itaratsiya_list=[0]
+itaratsiya_list=[]
 if st.button('2.Vatarlar usuli'):
     try:
         if calculate_function(func,a)*calculate_function(func,b)<0:
