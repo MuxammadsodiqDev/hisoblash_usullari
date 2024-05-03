@@ -122,7 +122,6 @@ if st.button('2.Vatarlar usuli'):
                 consta=b
                 xi=a
             x_list.append(xi)
-            itaratsiya_list.append(0)
             xn=xi-(calculate_function(func,xi)*(consta-xi))/(calculate_function(func,consta)-calculate_function(func,xi))
             while abs(xn-xi)>ϵ and itaratsiya1<max_itaratsiya1:
                 xi=xn
