@@ -64,7 +64,7 @@ if st.button('Funksiya grafigi'):
 
 #Foydalanuvchi tamonidan kiritilishi kerak
 func1 = st.text_input("f': ","2*x")
-func2 = st.text_input("f": ","2")
+func2 = st.text_input('f": ',"2")
 ϵ = st.number_input('hatolik: ')
 
 #Kesmani teng ikkiga bo'lish usuli
