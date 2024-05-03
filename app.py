@@ -128,7 +128,7 @@ if st.button('2.Vatarlar usuli'):
                 x_list.append(xi)
                 xn=xi-(calculate_function(func,xi)*(consta-xi))/(calculate_function(func,consta)-calculate_function(func,xi))
                 itaratsiya1+=1
-                itaratsiya_list.append(itaratsiya1)
+                itaratsiya_list.append(itaratsiya1+1)
             st.write('x=',xn)
             st.write('itaratsiya= ',itaratsiya1)
 
