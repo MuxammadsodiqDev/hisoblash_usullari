@@ -158,9 +158,9 @@ if st.button('3.Urunma usuli'):
             while abs(xn-xi)>ϵ and itaratsiya2<max_itaratsiya2:
                 xi=xn
                 xn=xi-calculate_function(func,xi)/calculate_function(func1,xi)
-                itaratsiya+=1
+                itaratsiya2+=1
             st.write('x=',xn)       
-            st.write('itaratsiya',itaratsiya)
+            st.write('itaratsiya',itaratsiya2)
     except:
         st.write('x=yechim mavjud emas!')
         
