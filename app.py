@@ -91,12 +91,13 @@ if st.button('1.Kesmani teng ikkiga bo\'lish usuli'):
                 itaratsiya_list.append(itaratsiya)
             st.write(x_list)
             st.write(itaratsiya_list)
-            fig = go.Figure(data=[go.Bar(x=itaratsiya_list, y=c_list)])
-            fig.update_layout(title='', xaxis_title="itaratsiyalar", yaxis_title="x")
-            fig.show()
+            
             
             st.write('x=',c)
             st.write('itaratsiya= ',itaratsiya)
+        fig = go.Figure(data=[go.Bar(x=itaratsiya_list, y=c_list)])
+        fig.update_layout(title='x va itaratsiya', xaxis_title="itaratsiyalar", yaxis_title="x")
+        fig.show()
     except:
         st.write('x=yechim mavjud emas!')
                     
