@@ -92,7 +92,8 @@ if st.button('1.Kesmani teng ikkiga bo\'lish usuli'):
                 itaratsiya+=1            
             st.write('x=',c)
             st.write('itaratsiya= ',itaratsiya)
-            itaratsiya_list+=1
+            itaratsiya_list=np.add(itaratsiya_list,1)
+            
             if len(itaratsiya_list)==len(c_list):
                 fig = go.Figure(data=[go.Bar(x=itaratsiya_list, y=c_list,marker_color="green")])
                 fig.update_layout(xaxis_title="itaratsiyalar", yaxis_title="x")
