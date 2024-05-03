@@ -69,9 +69,10 @@ a = st.number_input("a: ")
 b = st.number_input("b: ")
 ϵ = st.number_input('ϵ: ')
 
+
+#Kesmani teng ikkiga bo'lish usuli
 c_list=[]
 itaratsiya_list=[]
-#Kesmani teng ikkiga bo'lish usuli
 if st.button('1.Kesmani teng ikkiga bo\'lish usuli'):
     try:
         if calculate_function(func,a)*calculate_function(func,b)<0:
@@ -105,6 +106,8 @@ if st.button('1.Kesmani teng ikkiga bo\'lish usuli'):
                     
 
 #Vatarlar yordamida hisoblash usuli
+x_list=[]
+itaratsiya_list=[]
 if st.button('2.Vatarlar usuli'):
     try:
         if calculate_function(func,a)*calculate_function(func,b)<0:
@@ -118,13 +121,23 @@ if st.button('2.Vatarlar usuli'):
             else:
                 consta=b
                 xi=a
+            x_list.append(xi)
             xn=xi-(calculate_function(func,xi)*(consta-xi))/(calculate_function(func,consta)-calculate_function(func,xi))
             while abs(xn-xi)>ϵ and itaratsiya1<max_itaratsiya1:
                 xi=xn
+                x_list.append(xi)
                 xn=xi-(calculate_function(func,xi)*(consta-xi))/(calculate_function(func,consta)-calculate_function(func,xi))
                 itaratsiya1+=1
+                itaratsiya_list.append(itaratsiya1)
             st.write('x=',xn)
             st.write('itaratsiya= ',itaratsiya1)
+
+            if len(itaratsiya_list)==len(c_list):
+                fig = go.Figure(data=[go.Bar(x=itaratsiya_list, y=c_list,marker_color="green")])
+                fig.update_layout(xaxis_title="itaratsiyalar", yaxis_title="x")
+                st.plotly_chart(fig)
+            else:
+                st.write('hato')
     except:
         st.write('x=yechim mavjud emas!')
         
