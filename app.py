@@ -82,7 +82,7 @@ if st.button('1.Kesmani teng ikkiga bo\'lish usuli'):
             while abs(a - b) > ϵ and itaratsiya<max_itaratsiya:
                 c = (a + b) / 2
                 c_list.append(c)
-                itaratsiya_list.append(itaratsiya)
+                itaratsiya_list.append(itaratsiya+1)
                 if calculate_function(func,c) == 0:
                     break
                 elif calculate_function(func,c) * calculate_function(func,a) < 0:
@@ -92,7 +92,6 @@ if st.button('1.Kesmani teng ikkiga bo\'lish usuli'):
                 itaratsiya+=1            
             st.write('x=',c)
             st.write('itaratsiya= ',itaratsiya)
-            itaratsiya_list=np.add(itaratsiya_list,1)
             
             if len(itaratsiya_list)==len(c_list):
                 fig = go.Figure(data=[go.Bar(x=itaratsiya_list, y=c_list,marker_color="green")])
