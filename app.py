@@ -79,28 +79,30 @@ kalit = option[0]
 #Yechish
 if st.button("Yechish: "):
     #Kesmani teng ikkiga bo'lish usuli
-    c_list=[]
-    itaratsiya_list=[]
+    x_list1=[]
+    itaratsiya_list1=[]
     if kalit=="1":
         try:
             if calculate_function(func,a)*calculate_function(func,b)<0:
                 # Iterativ yechim topish
-                max_itaratsiya=100
-                itaratsiya=0
+                max_itaratsiya1=100
+                itaratsiya1=0
                 
-                while abs(a - b) > ϵ and itaratsiya<max_itaratsiya:
+                while abs(a - b) > ϵ and itaratsiya1<max_itaratsiya1:
                     c = (a + b) / 2
-                    c_list.append(c)
-                    itaratsiya_list.append(itaratsiya+1)
+                    x_list.append(c)
+                    itaratsiya_list1.append(itaratsiya1+1)
+                    
                     if calculate_function(func,c) == 0:
                         break
                     elif calculate_function(func,c) * calculate_function(func,a) < 0:
                         b = c
                     else:
                         a = c
-                    itaratsiya+=1            
+                    itaratsiya1+=1  
+                    
                 st.write('x=',c)
-                st.write('itaratsiya= ',itaratsiya)
+                st.write('itaratsiya= ',itaratsiya1)
                 
                 if len(itaratsiya_list)==len(c_list):
                     fig = go.Figure(data=[go.Bar(x=itaratsiya_list, y=c_list,marker_color="green")])
@@ -114,14 +116,14 @@ if st.button("Yechish: "):
                     
 
     #Vatarlar yordamida hisoblash usuli
-    x_list=[]
-    itaratsiya_list=[]
+    x_list2=[]
+    itaratsiya_list2=[]
     if kalit == '2':
             try:
                 if calculate_function(func,a)*calculate_function(func,b)<0:
                     #itarativ yechim topish
-                    max_itaratsiya1=100
-                    itaratsiya1=1
+                    max_itaratsiya2=100
+                    itaratsiya2=1
                 
                     if calculate_function(func,a)*calculate_function(func2,a)>0:
                         consta=a
@@ -129,20 +131,22 @@ if st.button("Yechish: "):
                     else:
                         consta=b
                         xi=a
-                    x_list.append(xi)
-                    itaratsiya_list.append(1)
+                        
+                    x_lis2t.append(xi)
+                    itaratsiya_list2.append(1)
                     xn=xi-(calculate_function(func,xi)*(consta-xi))/(calculate_function(func,consta)-calculate_function(func,xi))
-                    while abs(xn-xi)>ϵ and itaratsiya1<max_itaratsiya1:
+                    
+                    while abs(xn-xi)>ϵ and itaratsiya2<max_itaratsiya2:
                         xi=xn
-                        x_list.append(xi)
+                        x_list2.append(xi)
                         xn=xi-(calculate_function(func,xi)*(consta-xi))/(calculate_function(func,consta)-calculate_function(func,xi))
-                        itaratsiya1+=1
-                        itaratsiya_list.append(itaratsiya1)
+                        itaratsiya2+=1
+                        itaratsiya_list2.append(itaratsiya2)
                     st.write('x=',xn)
-                    st.write('itaratsiya= ',itaratsiya1)
+                    st.write('itaratsiya= ',itaratsiya2)
         
-                    if len(itaratsiya_list)==len(x_list):
-                        fig = go.Figure(data=[go.Bar(x=itaratsiya_list, y=x_list,marker_color="green")])
+                    if len(itaratsiya_list2)==len(x_list2):
+                        fig = go.Figure(data=[go.Bar(x=itaratsiya_list2, y=x_list2,marker_color="green")])
                         fig.update_layout(xaxis_title="itaratsiyalar", yaxis_title="x")
                         st.plotly_chart(fig)
                     else:
@@ -151,34 +155,34 @@ if st.button("Yechish: "):
                 st.write('x=yechim mavjud emas!')
         
     #Urunmalar yordamida hisoblash usuli
-    x_list=[]
-    itaratsiya_list=[]
+    x_list3=[]
+    itaratsiya_list3=[]
     if kalit=="3":
         try:
             if calculate_function(func,a)*calculate_function(func,b)<0:
                 #itaratsiyaviy yechim topish
-                max_itaratsiya2=100
-                itaratsiya2=0
+                max_itaratsiya3=100
+                itaratsiya3=0
                 
                 if calculate_function(func,a)*calculate_function(func2,a)>0:
                     xi=a
                 else:
                     xi=b
-                    
+                u_list.append(xi)   
                 itaratsiya_list.append(1)
                 xn=xi-calculate_function(func,xi)/calculate_function(func1,xi)
                 
-                while abs(xn-xi)>ϵ and itaratsiya2<max_itaratsiya2:
+                while abs(xn-xi)>ϵ and itaratsiya3<max_itaratsiya3:
                     xi=xn
                     xn=xi-calculate_function(func,xi)/calculate_function(func1,xi)
-                    itaratsiya2+=1
-                    itaratsiya_list.append(itaratsiya2)
+                    itaratsiya3+=1
+                    itaratsiya_list3.append(itaratsiya3)
                     
                 st.write('x=',xn)       
-                st.write('itaratsiya',itaratsiya2)
+                st.write('itaratsiya',itaratsiya3)
     
-                if len(itaratsiya_list)==len(x_list):
-                    fig = go.Figure(data=[go.Bar(x=itaratsiya_list, y=x_list,marker_color="green")])
+                if len(itaratsiya_list3)==len(x_list3):
+                    fig = go.Figure(data=[go.Bar(x=itaratsiya_list3, y=x_list3,marker_color="green")])
                     fig.update_layout(xaxis_title="itaratsiyalar", yaxis_title="x")
                     st.plotly_chart(fig)
                 else:
