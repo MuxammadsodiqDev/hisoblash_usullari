@@ -79,7 +79,8 @@ st.write("", option[0])
 c_list=[]
 itaratsiya_list=[]
 #if st.button('1.Kesmani teng ikkiga bo\'lish usuli'):
-if option[0]=="K":
+#if option[0]=="K":
+if st.button("Yechish: "):
     try:
         if calculate_function(func,a)*calculate_function(func,b)<0:
             # Iterativ yechim topish
