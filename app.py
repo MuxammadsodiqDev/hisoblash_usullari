@@ -71,8 +71,7 @@ b = st.number_input("b: ")
 
 option = st.selectbox(
     "Quyudaga usulni birini tanlang!",
-    ("Kesmani teng ikkiga bo'lish usul:", "Vatarlar usuli:", "Urunmalar usuli:","Urunma (madifiqatsiya) usuli:"),
-    index=None)
+    ("Kesmani teng ikkiga bo'lish usul:", "Vatarlar usuli:", "Urunmalar usuli:","Urunma (madifiqatsiya) usuli:")
 
 st.write("", option[0])
 
