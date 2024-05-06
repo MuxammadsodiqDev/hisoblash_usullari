@@ -176,6 +176,7 @@ if st.button("Yechish: "):
                     xi=xn
                     xn=xi-calculate_function(func,xi)/calculate_function(func1,xi)
                     itaratsiya+=1
+                    x_list.append(xn)
                     itaratsiya_list.append(itaratsiya)
                     
                 st.write('x=',xn)       
