@@ -82,35 +82,36 @@ itaratsiya_list=[]
 #if st.button('1.Kesmani teng ikkiga bo\'lish usuli'):
 #if option[0]=="K":
 if st.button("Yechish: "):
-    try:
-        if calculate_function(func,a)*calculate_function(func,b)<0:
-            # Iterativ yechim topish
-            max_itaratsiya=100
-            itaratsiya=0
-            
-            while abs(a - b) > ϵ and itaratsiya<max_itaratsiya:
-                c = (a + b) / 2
-                c_list.append(c)
-                itaratsiya_list.append(itaratsiya+1)
-                if calculate_function(func,c) == 0:
-                    break
-                elif calculate_function(func,c) * calculate_function(func,a) < 0:
-                    b = c
+    if kalit=="K":
+        try:
+            if calculate_function(func,a)*calculate_function(func,b)<0:
+                # Iterativ yechim topish
+                max_itaratsiya=100
+                itaratsiya=0
+                
+                while abs(a - b) > ϵ and itaratsiya<max_itaratsiya:
+                    c = (a + b) / 2
+                    c_list.append(c)
+                    itaratsiya_list.append(itaratsiya+1)
+                    if calculate_function(func,c) == 0:
+                        break
+                    elif calculate_function(func,c) * calculate_function(func,a) < 0:
+                        b = c
+                    else:
+                        a = c
+                    itaratsiya+=1            
+                st.write('x=',c)
+                st.write('itaratsiya= ',itaratsiya)
+                
+                if len(itaratsiya_list)==len(c_list):
+                    fig = go.Figure(data=[go.Bar(x=itaratsiya_list, y=c_list,marker_color="green")])
+                    fig.update_layout(xaxis_title="itaratsiyalar", yaxis_title="x")
+                    st.plotly_chart(fig)
                 else:
-                    a = c
-                itaratsiya+=1            
-            st.write('x=',c)
-            st.write('itaratsiya= ',itaratsiya)
-            
-            if len(itaratsiya_list)==len(c_list):
-                fig = go.Figure(data=[go.Bar(x=itaratsiya_list, y=c_list,marker_color="green")])
-                fig.update_layout(xaxis_title="itaratsiyalar", yaxis_title="x")
-                st.plotly_chart(fig)
-            else:
-                st.write('hato')
-            
-    except:
-        st.write('x=yechim mavjud emas!')
+                    st.write('hato')
+                
+        except:
+            st.write('x=yechim mavjud emas!')
                     
 
 #Vatarlar yordamida hisoblash usuli
