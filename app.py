@@ -8,7 +8,7 @@ st.markdown("<h1 style='color: green;'>TAQRIBIY YECHISH</h1>", unsafe_allow_html
 
 option = st.selectbox(
     "Quyudaga usulni birini tanlang!",
-    ("Kesmani teng ikkiga bo'lish usul:", "Vatarlar usuli:", "Urunmalar usuli","Urunma (madifiqatsiya) usuli:"))
+    ("Kesmani teng ikkiga bo'lish usul:", "Vatarlar usuli:", "Urunmalar usuli:","Urunma (madifiqatsiya) usuli:"))
 
 st.write("", option)
 
