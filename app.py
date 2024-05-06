@@ -79,19 +79,19 @@ kalit = option[0]
 #Yechish
 if st.button("Yechish: "):
     #Kesmani teng ikkiga bo'lish usuli
-    x_list1=[]
-    itaratsiya_list1=[]
+    x_list=[]
+    itaratsiya_list=[]
     if kalit=="1":
         try:
             if calculate_function(func,a)*calculate_function(func,b)<0:
                 # Iterativ yechim topish
-                max_itaratsiya1=100
-                itaratsiya1=0
+                max_itaratsiya=100
+                itaratsiya=0
                 
-                while abs(a - b) > ϵ and itaratsiya1<max_itaratsiya1:
+                while abs(a - b) > ϵ and itaratsiya<max_itaratsiya:
                     c = (a + b) / 2
                     x_list.append(c)
-                    itaratsiya_list1.append(itaratsiya1+1)
+                    itaratsiya_list.append(itaratsiya+1)
                     
                     if calculate_function(func,c) == 0:
                         break
@@ -99,13 +99,13 @@ if st.button("Yechish: "):
                         b = c
                     else:
                         a = c
-                    itaratsiya1+=1  
+                    itaratsiya+=1  
                     
                 st.write('x=',c)
-                st.write('itaratsiya= ',itaratsiya1)
+                st.write('itaratsiya= ',itaratsiya)
                 
-                if len(itaratsiya_list1)==len(x_list1):
-                    fig = go.Figure(data=[go.Bar(x=itaratsiya_list1, y=x_list1,marker_color="green")])
+                if len(itaratsiya_list)==len(x_list):
+                    fig = go.Figure(data=[go.Bar(x=itaratsiya_list, y=x_list,marker_color="green")])
                     fig.update_layout(xaxis_title="itaratsiyalar", yaxis_title="x")
                     st.plotly_chart(fig)
                 else:
@@ -116,8 +116,8 @@ if st.button("Yechish: "):
                     
 
     #Vatarlar yordamida hisoblash usuli
-    x_list2=[]
-    itaratsiya_list2=[]
+    x_list=[]
+    itaratsiya_list=[]
     if kalit == '2':
             try:
                 if calculate_function(func,a)*calculate_function(func,b)<0:
