@@ -205,12 +205,26 @@ if st.button("Yechish: "):
                     xi=a
                 else:
                     xi=b
+                    
+                x_list.append(xi)   
+                itaratsiya_list.append(1)
                 x0=xi
                 xn=xi-calculate_function(func,xi)/calculate_function(func1,x0)
+                
                 while abs(xn-xi)>ϵ and itaratsiya<max_itaratsiya:
                     xi=xn
                     xn=xi-calculate_function(func,xi)/calculate_function(func1,x0)
                     itaratsiya+=1
+                    x_list.append(xn)
+                    itaratsiya_list.append(itaratsiya)
+                    
+                if len(itaratsiya_list)==len(x_list):
+                    fig = go.Figure(data=[go.Bar(x=itaratsiya_list, y=x_list,marker_color="green")])
+                    fig.update_layout(xaxis_title="itaratsiyalar", yaxis_title="x")
+                    st.plotly_chart(fig)
+                else:
+                    st.write("hato")
+                    
                 st.write('x=',xn)
                 st.write('itaratsiya',itaratsiya)
         except:
