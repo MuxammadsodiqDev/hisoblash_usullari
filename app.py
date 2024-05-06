@@ -115,10 +115,11 @@ if st.button("Yechish: "):
                     
 
     #Vatarlar yordamida hisoblash usuli
+    x_list=[]
+    itaratsiya_list=[]
     if kelit == 'V'
-        x_list=[]
-        itaratsiya_list=[]
-        if st.button('2.Vatarlar usuli'):
+        
+        
             try:
                 if calculate_function(func,a)*calculate_function(func,b)<0:
                     #itarativ yechim topish
