@@ -11,7 +11,7 @@ option = st.selectbox(
     ("Kesmani teng ikkiga bo'lish usul:", "Vatarlar usuli:", "Urunmalar usuli:","Urunma (madifiqatsiya) usuli:"),
     index=None)
 
-st.write("", option.index)
+st.write("", option[0])
 
 #Funksiya kiritish qo'llanma
 if st.button("Funksiya kiritish qo'llanmasi"):
