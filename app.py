@@ -122,8 +122,8 @@ if st.button("Yechish: "):
             try:
                 if calculate_function(func,a)*calculate_function(func,b)<0:
                     #itarativ yechim topish
-                    max_itaratsiya2=100
-                    itaratsiya2=1
+                    max_itaratsiya=100
+                    itaratsiya=1
                 
                     if calculate_function(func,a)*calculate_function(func2,a)>0:
                         consta=a
@@ -132,21 +132,21 @@ if st.button("Yechish: "):
                         consta=b
                         xi=a
                         
-                    x_lis2t.append(xi)
-                    itaratsiya_list2.append(1)
+                    x_list.append(xi)
+                    itaratsiya_list.append(1)
                     xn=xi-(calculate_function(func,xi)*(consta-xi))/(calculate_function(func,consta)-calculate_function(func,xi))
                     
-                    while abs(xn-xi)>ϵ and itaratsiya2<max_itaratsiya2:
+                    while abs(xn-xi)>ϵ and itaratsiya<max_itaratsiya:
                         xi=xn
                         x_list2.append(xi)
                         xn=xi-(calculate_function(func,xi)*(consta-xi))/(calculate_function(func,consta)-calculate_function(func,xi))
-                        itaratsiya2+=1
-                        itaratsiya_list2.append(itaratsiya2)
+                        itaratsiya+=1
+                        itaratsiya_list.append(itaratsiya)
                     st.write('x=',xn)
-                    st.write('itaratsiya= ',itaratsiya2)
+                    st.write('itaratsiya= ',itaratsiya)
         
-                    if len(itaratsiya_list2)==len(x_list2):
-                        fig = go.Figure(data=[go.Bar(x=itaratsiya_list2, y=x_list2,marker_color="green")])
+                    if len(itaratsiya_list)==len(x_list):
+                        fig = go.Figure(data=[go.Bar(x=itaratsiya_list, y=x_list,marker_color="green")])
                         fig.update_layout(xaxis_title="itaratsiyalar", yaxis_title="x")
                         st.plotly_chart(fig)
                     else:
@@ -155,34 +155,34 @@ if st.button("Yechish: "):
                 st.write('x=yechim mavjud emas!')
         
     #Urunmalar yordamida hisoblash usuli
-    x_list3=[]
-    itaratsiya_list3=[]
+    x_list=[]
+    itaratsiya_list=[]
     if kalit=="3":
         try:
             if calculate_function(func,a)*calculate_function(func,b)<0:
                 #itaratsiyaviy yechim topish
-                max_itaratsiya3=100
-                itaratsiya3=0
+                max_itaratsiya=100
+                itaratsiya=0
                 
                 if calculate_function(func,a)*calculate_function(func2,a)>0:
                     xi=a
                 else:
                     xi=b
-                u_list.append(xi)   
+                x_list.append(xi)   
                 itaratsiya_list.append(1)
                 xn=xi-calculate_function(func,xi)/calculate_function(func1,xi)
                 
-                while abs(xn-xi)>ϵ and itaratsiya3<max_itaratsiya3:
+                while abs(xn-xi)>ϵ and itaratsiya<max_itaratsiya:
                     xi=xn
                     xn=xi-calculate_function(func,xi)/calculate_function(func1,xi)
-                    itaratsiya3+=1
-                    itaratsiya_list3.append(itaratsiya3)
+                    itaratsiya+=1
+                    itaratsiya_list.append(itaratsiya)
                     
                 st.write('x=',xn)       
-                st.write('itaratsiya',itaratsiya3)
+                st.write('itaratsiya',itaratsiya)
     
-                if len(itaratsiya_list3)==len(x_list3):
-                    fig = go.Figure(data=[go.Bar(x=itaratsiya_list3, y=x_list3,marker_color="green")])
+                if len(itaratsiya_list)==len(x_list):
+                    fig = go.Figure(data=[go.Bar(x=itaratsiya_list, y=x_list,marker_color="green")])
                     fig.update_layout(xaxis_title="itaratsiyalar", yaxis_title="x")
                     st.plotly_chart(fig)
                 else:
@@ -191,12 +191,14 @@ if st.button("Yechish: "):
             st.write('x=yechim mavjud emas!')
         
     #Urunma (modifiqatsiyasi) yordamida hisoblash usuli
+    x_list=[]
+    itaratsiya_list=[]
     if kalit=='4':
         try:
             if calculate_function(func,a)*calculate_function(func,b)<0:
                 #itaratsaviy yechim topish
-                max_itaratsiya3=100
-                itaratsiya3=0
+                max_itaratsiya=100
+                itaratsiya=0
                 
                 if calculate_function(func,a)*calculate_function(func2,a)>0:
                     xi=a
