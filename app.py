@@ -104,8 +104,8 @@ if st.button("Yechish: "):
                 st.write('x=',c)
                 st.write('itaratsiya= ',itaratsiya1)
                 
-                if len(itaratsiya_list)==len(c_list):
-                    fig = go.Figure(data=[go.Bar(x=itaratsiya_list, y=c_list,marker_color="green")])
+                if len(itaratsiya_list1)==len(x_list1):
+                    fig = go.Figure(data=[go.Bar(x=itaratsiya_list1, y=x_list1,marker_color="green")])
                     fig.update_layout(xaxis_title="itaratsiyalar", yaxis_title="x")
                     st.plotly_chart(fig)
                 else:
