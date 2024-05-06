@@ -69,18 +69,18 @@ a = st.number_input("a: ")
 b = st.number_input("b: ")
 ϵ = st.number_input('ϵ: ')
 
+#Yechish usulini tanlash
 option = st.selectbox(
-    "Quyudaga usulni birini tanlang!",
+    "Yechish usulini tanlang!",
     ("1.Kesmani teng ikkiga bo'lish usul:", "2.Vatarlar usuli:", "3.Urunmalar usuli:","4.Urunma (madifiqatsiya) usuli:"))
-
 kalit = option[0]
 
-#Kesmani teng ikkiga bo'lish usuli
-c_list=[]
-itaratsiya_list=[]
-#if st.button('1.Kesmani teng ikkiga bo\'lish usuli'):
-#if option[0]=="K":
+
+#Yechish
 if st.button("Yechish: "):
+    #Kesmani teng ikkiga bo'lish usuli
+    c_list=[]
+    itaratsiya_list=[]
     if kalit=="1":
         try:
             if calculate_function(func,a)*calculate_function(func,b)<0:
@@ -117,8 +117,6 @@ if st.button("Yechish: "):
     x_list=[]
     itaratsiya_list=[]
     if kalit == '2':
-        
-        
             try:
                 if calculate_function(func,a)*calculate_function(func,b)<0:
                     #itarativ yechim topish
@@ -152,63 +150,63 @@ if st.button("Yechish: "):
             except:
                 st.write('x=yechim mavjud emas!')
         
-#Urunmalar yordamida hisoblash usuli
-x_list=[]
-itaratsiya_list=[]
-if st.button('3.Urunma usuli'):
-    try:
-        if calculate_function(func,a)*calculate_function(func,b)<0:
-            #itaratsiyaviy yechim topish
-            max_itaratsiya2=100
-            itaratsiya2=1
-            
-            if calculate_function(func,a)*calculate_function(func2,a)>0:
-                xi=a
-            else:
-                xi=b
-            x_list.append(xi)
-            itaratsiya_list.append(1)
-            xn=xi-calculate_function(func,xi)/calculate_function(func1,xi)
-            while abs(xn-xi)>ϵ and itaratsiya2<max_itaratsiya2:
-                xi=xn
-                xn=xi-calculate_function(func,xi)/calculate_function(func1,xi)
-                itaratsiya2+=1
-                itaratsiya_list.append(itaratsiya2)
+    #Urunmalar yordamida hisoblash usuli
+    x_list=[]
+    itaratsiya_list=[]
+    if kalit=="3":
+        try:
+            if calculate_function(func,a)*calculate_function(func,b)<0:
+                #itaratsiyaviy yechim topish
+                max_itaratsiya2=100
+                itaratsiya2=1
                 
-            st.write('x=',xn)       
-            st.write('itaratsiya',itaratsiya2)
-
-            if len(itaratsiya_list)==len(x_list):
-                fig = go.Figure(data=[go.Bar(x=itaratsiya_list, y=x_list,marker_color="green")])
-                fig.update_layout(xaxis_title="itaratsiyalar", yaxis_title="x")
-                st.plotly_chart(fig)
-            else:
-                st.write("hato")   
-    except:
-        st.write('x=yechim mavjud emas!')
+                if calculate_function(func,a)*calculate_function(func2,a)>0:
+                    xi=a
+                else:
+                    xi=b
+                x_list.append(xi)
+                itaratsiya_list.append(1)
+                xn=xi-calculate_function(func,xi)/calculate_function(func1,xi)
+                while abs(xn-xi)>ϵ and itaratsiya2<max_itaratsiya2:
+                    xi=xn
+                    xn=xi-calculate_function(func,xi)/calculate_function(func1,xi)
+                    itaratsiya2+=1
+                    itaratsiya_list.append(itaratsiya2)
+                    
+                st.write('x=',xn)       
+                st.write('itaratsiya',itaratsiya2)
+    
+                if len(itaratsiya_list)==len(x_list):
+                    fig = go.Figure(data=[go.Bar(x=itaratsiya_list, y=x_list,marker_color="green")])
+                    fig.update_layout(xaxis_title="itaratsiyalar", yaxis_title="x")
+                    st.plotly_chart(fig)
+                else:
+                    st.write("hato")   
+        except:
+            st.write('x=yechim mavjud emas!')
         
-#Urunma (modifiqatsiyasi) yordamida hisoblash usuli
-if st.button('4.Urunma (modifiqatsiya) usuli'):
-    try:
-        if calculate_function(func,a)*calculate_function(func,b)<0:
-            #itaratsaviy yechim topish
-            max_itaratsiya3=100
-            itaratsiya3=0
-            
-            if calculate_function(func,a)*calculate_function(func2,a)>0:
-                xi=a
-            else:
-                xi=b
-            x0=xi
-            xn=xi-calculate_function(func,xi)/calculate_function(func1,x0)
-            while abs(xn-xi)>ϵ and itaratsiya3<max_itaratsiya3:
-                xi=xn
+    #Urunma (modifiqatsiyasi) yordamida hisoblash usuli
+    if kalit=='4':
+        try:
+            if calculate_function(func,a)*calculate_function(func,b)<0:
+                #itaratsaviy yechim topish
+                max_itaratsiya3=100
+                itaratsiya3=0
+                
+                if calculate_function(func,a)*calculate_function(func2,a)>0:
+                    xi=a
+                else:
+                    xi=b
+                x0=xi
                 xn=xi-calculate_function(func,xi)/calculate_function(func1,x0)
-                itaratsiya3+=1
-            st.write('x=',xn)
-            st.write('itaratsiya',itaratsiya3)
-    except:
-        st.write('x=yechim mavjud emas!')
+                while abs(xn-xi)>ϵ and itaratsiya3<max_itaratsiya3:
+                    xi=xn
+                    xn=xi-calculate_function(func,xi)/calculate_function(func1,x0)
+                    itaratsiya3+=1
+                st.write('x=',xn)
+                st.write('itaratsiya',itaratsiya3)
+        except:
+            st.write('x=yechim mavjud emas!')
         
 #Yukoridagi barchasi hisoblash
 if st.button('Barchasini hisoblash'):
