@@ -71,7 +71,7 @@ b = st.number_input("b: ")
 
 option = st.selectbox(
     "Quyudaga usulni birini tanlang!",
-    ("Kesmani teng ikkiga bo'lish usul:", "Vatarlar usuli:", "Urunmalar usuli:","Urunma (madifiqatsiya) usuli:"))
+    ("1.Kesmani teng ikkiga bo'lish usul:", "2.Vatarlar usuli:", "3.Urunmalar usuli:","4.Urunma (madifiqatsiya) usuli:"))
 
 kalit = option[0]
 
@@ -81,7 +81,7 @@ itaratsiya_list=[]
 #if st.button('1.Kesmani teng ikkiga bo\'lish usuli'):
 #if option[0]=="K":
 if st.button("Yechish: "):
-    if kalit=="K":
+    if kalit=="1":
         try:
             if calculate_function(func,a)*calculate_function(func,b)<0:
                 # Iterativ yechim topish
@@ -116,7 +116,7 @@ if st.button("Yechish: "):
     #Vatarlar yordamida hisoblash usuli
     x_list=[]
     itaratsiya_list=[]
-    if kalit == 'V':
+    if kalit == '2':
         
         
             try:
