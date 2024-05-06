@@ -218,15 +218,15 @@ if st.button("Yechish: "):
                     x_list.append(xn)
                     itaratsiya_list.append(itaratsiya)
                     
+                st.write('x=',xn)
+                st.write('itaratsiya',itaratsiya)
+                
                 if len(itaratsiya_list)==len(x_list):
                     fig = go.Figure(data=[go.Bar(x=itaratsiya_list, y=x_list,marker_color="green")])
                     fig.update_layout(xaxis_title="itaratsiyalar", yaxis_title="x")
                     st.plotly_chart(fig)
                 else:
                     st.write("hato")
-                    
-                st.write('x=',xn)
-                st.write('itaratsiya',itaratsiya)
         except:
             st.write('x=yechim mavjud emas!')
         
