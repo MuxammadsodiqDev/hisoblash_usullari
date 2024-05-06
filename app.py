@@ -6,6 +6,12 @@ import math
 #Asosiy matn
 st.markdown("<h1 style='color: green;'>TAQRIBIY YECHISH</h1>", unsafe_allow_html=True)
 
+option = st.selectbox(
+    "How would you like to be contacted?",
+    ("Email", "Home phone", "Mobile phone"))
+
+st.write("You selected:", option)
+
 #Funksiya kiritish qo'llanma
 if st.button("Funksiya kiritish qo'llanmasi"):
     st.write("1. (ayirish -> -), (qo'shish -> +), (ko'paytrish -> *), bo'lish -> /")
