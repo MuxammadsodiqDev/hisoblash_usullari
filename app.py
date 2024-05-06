@@ -71,7 +71,7 @@ b = st.number_input("b: ")
 
 #Yechish usulini tanlash
 option = st.selectbox(
-    "Yechish usulini tanlang!",
+    "Yechish usulini tanla:",
     ("1.Kesmani teng ikkiga bo'lish usul:", "2.Vatarlar usuli:", "3.Urunmalar usuli:","4.Urunma (madifiqatsiya) usuli:"))
 kalit = option[0]
 
@@ -301,3 +301,11 @@ if st.button('Barchasini hisoblash'):
                 st.write('4. x=yechim mavjud emas!')
     except:
         st.write('Funksiya mavjud emas!')
+
+if st.button("Dastur haqida"):
+    st.write("maqsad: hisoblash usullari fanida transindate tenglamalarni
+    1.Kesmani teng ikki bo'lish usuli
+    2.Vatarlar usuli
+    3.Urunma usuli
+    4.Urunma madifiqatsiya usullari orqali kiritilgan oraliqda taqribiy yechimi hisoblaydi")
+    
