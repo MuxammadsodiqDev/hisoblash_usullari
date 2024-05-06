@@ -81,7 +81,7 @@ kalit= option[0]
 c_list=[]
 itaratsiya_list=[]
 #if st.button('1.Kesmani teng ikkiga bo\'lish usuli'):
-if kalit=="K"
+if kalit=="K":
     try:
         if calculate_function(func,a)*calculate_function(func,b)<0:
             # Iterativ yechim topish
