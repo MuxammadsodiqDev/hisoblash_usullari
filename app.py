@@ -158,7 +158,7 @@ if st.button("Yechish: "):
             if calculate_function(func,a)*calculate_function(func,b)<0:
                 #itaratsiyaviy yechim topish
                 max_itaratsiya2=100
-                itaratsiya2=1
+                itaratsiya2=0
                 
                 if calculate_function(func,a)*calculate_function(func2,a)>0:
                     xi=a
