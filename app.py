@@ -206,12 +206,12 @@ if st.button("Yechish: "):
                     xi=b
                 x0=xi
                 xn=xi-calculate_function(func,xi)/calculate_function(func1,x0)
-                while abs(xn-xi)>ϵ and itaratsiya3<max_itaratsiya3:
+                while abs(xn-xi)>ϵ and itaratsiya<max_itaratsiya:
                     xi=xn
                     xn=xi-calculate_function(func,xi)/calculate_function(func1,x0)
-                    itaratsiya3+=1
+                    itaratsiya+=1
                 st.write('x=',xn)
-                st.write('itaratsiya',itaratsiya3)
+                st.write('itaratsiya',itaratsiya)
         except:
             st.write('x=yechim mavjud emas!')
         
