@@ -6,13 +6,6 @@ import math
 #Asosiy matn
 st.markdown("<h1 style='color: green;'>TAQRIBIY YECHISH</h1>", unsafe_allow_html=True)
 
-option = st.selectbox(
-    "Quyudaga usulni birini tanlang!",
-    ("Kesmani teng ikkiga bo'lish usul:", "Vatarlar usuli:", "Urunmalar usuli:","Urunma (madifiqatsiya) usuli:"),
-    index=None)
-
-st.write("", option[0])
-
 #Funksiya kiritish qo'llanma
 if st.button("Funksiya kiritish qo'llanmasi"):
     st.write("1. (ayirish -> -), (qo'shish -> +), (ko'paytrish -> *), bo'lish -> /")
@@ -76,11 +69,19 @@ a = st.number_input("a: ")
 b = st.number_input("b: ")
 ϵ = st.number_input('ϵ: ')
 
+option = st.selectbox(
+    "Quyudaga usulni birini tanlang!",
+    ("Kesmani teng ikkiga bo'lish usul:", "Vatarlar usuli:", "Urunmalar usuli:","Urunma (madifiqatsiya) usuli:"),
+    index=None)
 
+st.write("", option[0])
+
+kalit= option[0]
 #Kesmani teng ikkiga bo'lish usuli
 c_list=[]
 itaratsiya_list=[]
-if st.button('1.Kesmani teng ikkiga bo\'lish usuli'):
+#if st.button('1.Kesmani teng ikkiga bo\'lish usuli'):
+if kalit=="K"
     try:
         if calculate_function(func,a)*calculate_function(func,b)<0:
             # Iterativ yechim topish
