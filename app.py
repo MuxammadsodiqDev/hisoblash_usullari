@@ -123,7 +123,7 @@ if st.button("Yechish: "):
                 if calculate_function(func,a)*calculate_function(func,b)<0:
                     #itarativ yechim topish
                     max_itaratsiya=100
-                    itaratsiya=1
+                    itaratsiya=0
                 
                     if calculate_function(func,a)*calculate_function(func2,a)>0:
                         consta=a
