@@ -114,42 +114,43 @@ if st.button("Yechish: "):
             st.write('x=yechim mavjud emas!')
                     
 
-#Vatarlar yordamida hisoblash usuli
-x_list=[]
-itaratsiya_list=[]
-if st.button('2.Vatarlar usuli'):
-    try:
-        if calculate_function(func,a)*calculate_function(func,b)<0:
-            #itarativ yechim topish
-            max_itaratsiya1=100
-            itaratsiya1=1
+    #Vatarlar yordamida hisoblash usuli
+    if kelit == 'V'
+        x_list=[]
+        itaratsiya_list=[]
+        if st.button('2.Vatarlar usuli'):
+            try:
+                if calculate_function(func,a)*calculate_function(func,b)<0:
+                    #itarativ yechim topish
+                    max_itaratsiya1=100
+                    itaratsiya1=1
+                
+                    if calculate_function(func,a)*calculate_function(func2,a)>0:
+                        consta=a
+                        xi=b
+                    else:
+                        consta=b
+                        xi=a
+                    x_list.append(xi)
+                    itaratsiya_list.append(1)
+                    xn=xi-(calculate_function(func,xi)*(consta-xi))/(calculate_function(func,consta)-calculate_function(func,xi))
+                    while abs(xn-xi)>ϵ and itaratsiya1<max_itaratsiya1:
+                        xi=xn
+                        x_list.append(xi)
+                        xn=xi-(calculate_function(func,xi)*(consta-xi))/(calculate_function(func,consta)-calculate_function(func,xi))
+                        itaratsiya1+=1
+                        itaratsiya_list.append(itaratsiya1)
+                    st.write('x=',xn)
+                    st.write('itaratsiya= ',itaratsiya1)
         
-            if calculate_function(func,a)*calculate_function(func2,a)>0:
-                consta=a
-                xi=b
-            else:
-                consta=b
-                xi=a
-            x_list.append(xi)
-            itaratsiya_list.append(1)
-            xn=xi-(calculate_function(func,xi)*(consta-xi))/(calculate_function(func,consta)-calculate_function(func,xi))
-            while abs(xn-xi)>ϵ and itaratsiya1<max_itaratsiya1:
-                xi=xn
-                x_list.append(xi)
-                xn=xi-(calculate_function(func,xi)*(consta-xi))/(calculate_function(func,consta)-calculate_function(func,xi))
-                itaratsiya1+=1
-                itaratsiya_list.append(itaratsiya1)
-            st.write('x=',xn)
-            st.write('itaratsiya= ',itaratsiya1)
-
-            if len(itaratsiya_list)==len(x_list):
-                fig = go.Figure(data=[go.Bar(x=itaratsiya_list, y=x_list,marker_color="green")])
-                fig.update_layout(xaxis_title="itaratsiyalar", yaxis_title="x")
-                st.plotly_chart(fig)
-            else:
-                st.write("hato")
-    except:
-        st.write('x=yechim mavjud emas!')
+                    if len(itaratsiya_list)==len(x_list):
+                        fig = go.Figure(data=[go.Bar(x=itaratsiya_list, y=x_list,marker_color="green")])
+                        fig.update_layout(xaxis_title="itaratsiyalar", yaxis_title="x")
+                        st.plotly_chart(fig)
+                    else:
+                        st.write("hato")
+            except:
+                st.write('x=yechim mavjud emas!')
         
 #Urunmalar yordamida hisoblash usuli
 x_list=[]
