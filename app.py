@@ -7,8 +7,8 @@ import math
 st.markdown("<h1 style='color: green;'>TAQRIBIY YECHISH</h1>", unsafe_allow_html=True)
 
 option = st.selectbox(
-    "How would you like to be contacted?",
-    ("Email", "Home phone", "Mobile phone"))
+    "Quyudaga usulni birini tanlang!",
+    ("Kesmani teng ikkiga bo'lish usul:", "Vatarlar usuli:", "Urunmalar usuli","Urunma (madifiqatsiya) usuli:"))
 
 st.write("You selected:", option)
 
