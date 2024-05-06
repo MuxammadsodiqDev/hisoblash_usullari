@@ -138,7 +138,7 @@ if st.button("Yechish: "):
                     
                     while abs(xn-xi)>ϵ and itaratsiya<max_itaratsiya:
                         xi=xn
-                        x_list2.append(xi)
+                        x_list.append(xi)
                         xn=xi-(calculate_function(func,xi)*(consta-xi))/(calculate_function(func,consta)-calculate_function(func,xi))
                         itaratsiya+=1
                         itaratsiya_list.append(itaratsiya)
