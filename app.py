@@ -74,7 +74,6 @@ option = st.selectbox(
     ("Kesmani teng ikkiga bo'lish usul:", "Vatarlar usuli:", "Urunmalar usuli:","Urunma (madifiqatsiya) usuli:"))
 
 kalit = option[0]
-st.write("", kalit)
 
 #Kesmani teng ikkiga bo'lish usuli
 c_list=[]
@@ -117,7 +116,7 @@ if st.button("Yechish: "):
     #Vatarlar yordamida hisoblash usuli
     x_list=[]
     itaratsiya_list=[]
-    if kelit == 'V':
+    if kalit == 'V':
         
         
             try:
