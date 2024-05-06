@@ -34,8 +34,8 @@ def calculate_function(expression, x_value):
 
 #Foydalanuvchi tamonidan kiritilishi kerak
 func = st.text_input("Funksiya: ","x**2-9")
-a = st.number_input("min: ")
-b = st.number_input("max: ")
+c = st.number_input("min: ")
+d = st.number_input("max: ")
 
 
 #Funksiyani grafigi chizish
@@ -43,7 +43,7 @@ if st.button('Funksiya grafigi'):
     try:
             
             if func:
-                x_values = np.arange(a, b, 0.001)
+                x_values = np.arange(c, d, 0.001)
                 y_values = [calculate_function(func, x) for x in x_values]
                 y=0/x_values
         
