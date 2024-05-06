@@ -117,7 +117,7 @@ if st.button("Yechish: "):
     #Vatarlar yordamida hisoblash usuli
     x_list=[]
     itaratsiya_list=[]
-    if kelit == 'V'
+    if kelit == 'V':
         
         
             try:
