@@ -269,6 +269,7 @@ if st.button("Yechish 📝 "):
                     st.write("1.Kesmani teng ikkiga bo'lish usuli:")    
                     st.write("x= ",c)
                     st.write("itaratsiya=",itaratsiya)
+                    st.write("")
                 except:
                     st.write('1. x=yechim mavjud emas!')
     
@@ -295,6 +296,8 @@ if st.button("Yechish 📝 "):
                     st.write("2.Vatarlar yordamida hisoblash usuli:")
                     st.write('x= ',xn)
                     st.write('itaratsiya= ',itaratsiya)
+                    st.write("")
+                    
                 except:
                     st.write('2. x=yechim mavjud emas!')
                 try:    
@@ -320,6 +323,8 @@ if st.button("Yechish 📝 "):
                     st.write("3.Urunmalar yordamida hisoblash usuli:")
                     st.write('x= ',xn)
                     st.write('itaratsiya= ',itaratsiya)
+                    st.write("")
+                    
                     
                 except:
                     st.write('3. x=yechim mavjud emas!')
