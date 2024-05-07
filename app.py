@@ -251,7 +251,9 @@ if st.button('Barchasini hisoblash'):
                     itaratsiya+=1
                 if itaratsiya>100:
                     st.write("itaratsiya 100 dan katta bo'ldi")
+                    
                 st.write("1. x= ",c)
+                st.write("itaratsiya=")
             except:
                 st.write('1. x=yechim mavjud emas!')
 
