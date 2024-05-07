@@ -293,7 +293,7 @@ if st.button("Yechish 📝 "):
                         if itaratsiya>100:
                             st.write("itaratsiya 100 dan oshdi")
                             break
-                    st.write("2.Vatarlar yordamida hisoblash usuli:")
+                    st.write("2.Vatarlar usuli:")
                     st.write('x= ',xn)
                     st.write('itaratsiya= ',itaratsiya)
                     st.write("")
@@ -320,7 +320,7 @@ if st.button("Yechish 📝 "):
                             st.write("itaratsiya 100 dan oshdi")
                             break
 
-                    st.write("3.Urunmalar yordamida hisoblash usuli:")
+                    st.write("3.Urunmalar usuli:")
                     st.write('x= ',xn)
                     st.write('itaratsiya= ',itaratsiya)
                     st.write("")
@@ -365,11 +365,11 @@ if st.button("Dastur haqida 📌"):
     st.write("1.Kesmani teng ikki bo'lish usuli")
     st.write("2.Vatarlar usuli")
     st.write("3.Urunma usuli")
-    st.write("4.Urunma madifiqatsiya usullari orqali kiritilgan oraliqda taqribiy yechimni aniqlaydi")
+    st.write("4.Urunma madifiqatsiya usullari orqali kiritilgan oraliqda taqribiy yechimni aniqlab berish.")
     st.write("")
     st.write("")
     st.write("")
-    st.write("Ishlab chiqdi: Urganchda Davlat Universiteti Fizika-Matematika fakulteti, 211 amaliy matematika talabasi, Xaytyazov Muxammadsodiq Matnazar o'g'li")
+    st.write("Ishlab chiqdi: Urganch Davlat Universiteti Fizika-Matematika fakulteti, 211 amaliy matematika talabasi, Xaytyazov Muxammadsodiq Matnazar o'g'li")
     st.write("Dastur qodi: Yuqorida o'ng tarafdagi github belgisi ustiga bosing ↗️")
     st.page_link("https://t.me/my_projects_chanel",label='mening proyektlarim',icon="➡️")
     st.write("Ishlab chiqilgan vaqt: 2024-yil , 3 - kurs bahorgi semestr")
