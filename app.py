@@ -351,7 +351,7 @@ if st.button("Yechish 📝 "):
         except:
             st.write('Funksiya mavjud emas!')
 
-if st.button("Dastur haqida"):
+if st.button("Dastur haqida 📌"):
     st.write("Maqsad: Hisoblash usullari fani uchun transsendent tenglamalarni")
     st.write("1.Kesmani teng ikki bo'lish usuli")
     st.write("2.Vatarlar usuli")
