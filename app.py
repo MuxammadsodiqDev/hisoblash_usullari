@@ -7,7 +7,7 @@ import math
 st.markdown("<h1 style='color: green;'>TAQRIBIY YECHISH</h1>", unsafe_allow_html=True)
 
 #Funksiya kiritish qo'llanma
-if st.button("Funksiya kiritish qo'llanmasi"):
+if st.button("Funksiya kiritish qo'llanmasi📗"):
     st.write("1. (ayirish -> -), (qo'shish -> +), (ko'paytrish -> *), bo'lish -> /")
     st.write("2. daraja ko'tarish -> **(n)  ,ildiz hisoblash -> **(1/n), (bu yerda 1/n soni -n inchi darajasi)")
     st.write("3. logarifmik funksiyalar: ln(x),log(x,n)... -> (bu yerda n logarifm asosi) ")
