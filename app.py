@@ -4,7 +4,7 @@ import numpy as np
 import math 
 
 #Asosiy matn
-st.markdown("<h1 style='color: green;'>TAQRIBIY YECHISH</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='color: green;'>BIR O'ZGARUVCHILI TENGLAMALARNI TAQRIBIY YECHISH</h1>", unsafe_allow_html=True)
 
 #Funksiya kiritish qo'llanma
 if st.button("Funksiya kiritish qo'llanmasi📗"):
@@ -266,8 +266,8 @@ if st.button("Yechish 📝 "):
                         itaratsiya+=1
                     if itaratsiya>100:
                         st.write("itaratsiyalar soni 100 dan oshdi")
-                        
-                    st.write("1. x= ",c)
+                    st.write("1.Kesmani teng ikkiga bo'lish usuli:")    
+                    st.write("x= ",c)
                     st.write("itaratsiya=",itaratsiya)
                 except:
                     st.write('1. x=yechim mavjud emas!')
