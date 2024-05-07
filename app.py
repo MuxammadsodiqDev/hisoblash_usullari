@@ -155,6 +155,8 @@ if st.button("Yechish: "):
                         st.plotly_chart(fig)
                     else:
                         st.write("hato")
+                else:
+                    st.write('x=yechim mavjud emas!')
             except:
                 st.write('x=yechim mavjud emas!')
         
@@ -191,7 +193,10 @@ if st.button("Yechish: "):
                     fig.update_layout(xaxis_title="itaratsiyalar", yaxis_title="x")
                     st.plotly_chart(fig)
                 else:
-                    st.write("hato")   
+                    st.write("hato")
+            else:
+                st.write('x=yechim mavjud emas!')
+                
         except:
             st.write('x=yechim mavjud emas!')
         
@@ -231,6 +236,9 @@ if st.button("Yechish: "):
                     st.plotly_chart(fig)
                 else:
                     st.write("hato")
+            else:
+                    st.write('x=yechim mavjud emas!')
+                
         except:
             st.write('x=yechim mavjud emas!')
         
@@ -317,12 +325,21 @@ if st.button('Barchasini hisoblash'):
                 st.write('4. x=',xn)
             except:
                 st.write('4. x=yechim mavjud emas!')
+        else:
+            st.write("Biror usulda yechim mavjud emas!")
     except:
         st.write('Funksiya mavjud emas!')
 
 if st.button("Dastur haqida"):
-    st.write("MAQSAD: Hisoblash usullari uchun transsendent tenglamalarni")
+    st.write("Maqsad: Hisoblash usullari fani uchun transsendent tenglamalarni")
     st.write("1.Kesmani teng ikki bo'lish usuli")
     st.write("2.Vatarlar usuli")
     st.write("3.Urunma usuli")
     st.write("4.Urunma madifiqatsiya usullari orqali kiritilgan oraliqda taqribiy yechimni aniqlaydi")
+    st.write("")
+    st.write("")
+    st.write("")
+    st.write("Ishlab chiqdi: Urganchda Davlat Universiteti Fizika-Matematika fakulteti, 211 amaliy matematika talabasi, Xaytyazov Muxammadsodiq Matnazar o'g'li")
+    st.page_link("https://github.com/MuxammadsodiqDev", label="github")
+    st.write("SANA: 07.05.2024")
+    
