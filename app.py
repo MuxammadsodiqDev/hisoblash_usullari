@@ -370,7 +370,7 @@ if st.button("Dastur haqida 📌"):
     st.write("")
     st.write("")
     st.write("Ishlab chiqdi: Urganch Davlat Universiteti Fizika-Matematika fakulteti, 211 amaliy matematika talabasi, Xaytyazov Muxammadsodiq Matnazar o'g'li")
-    st.write("Dastur qodi: Yuqorida o'ng tarafdagi github belgisi ustiga bosing ↗️")
+    st.write("Dastur kodi: Yuqorida o'ng tarafdagi github belgisi ustiga bosing ↗️")
     st.page_link("https://t.me/my_projects_chanel",label='mening proyektlarim',icon="➡️")
     st.write("Ishlab chiqilgan vaqt: 2024-yil , 3 - kurs bahorgi semestr")
     
