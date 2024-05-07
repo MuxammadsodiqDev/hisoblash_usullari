@@ -236,9 +236,11 @@ if st.button('Barchasini hisoblash'):
         if calculate_function(func,a)*calculate_function(func,b)<0:
             try:
                 #Kesmani teng ikkiga bo'lish usuli
+                max_itaratsiya=100
+                itaratsiya=0
                 a1=a
                 b1=b
-                while abs(a1 - b1) > ϵ:
+                while abs(a1 - b1) > ϵ and itaratsiya<max_itaratsiya:
                     c = (a1 + b1) / 2
                     if calculate_function(func,c) == 0:
                         break
@@ -246,6 +248,9 @@ if st.button('Barchasini hisoblash'):
                         b1 = c
                     else:
                         a1 = c
+                    itaratsiya+=1
+                if itaratsiya>100:
+                    st.write('itaratsiya 100 dan katta bo\'ldi')
                 st.write("1. x= ",c)
             except:
                 st.write('1. x=yechim mavjud emas!')
