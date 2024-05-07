@@ -39,7 +39,7 @@ d = st.number_input("max: ")
 
 
 #Funksiyani grafigi chizish
-if st.button('Funksiya grafigi'):
+if st.button('Funksiya grafigi 📈'):
     try:
             
             if func:
@@ -77,7 +77,7 @@ kalit = option[0]
 
 
 #Yechish
-if st.button("Yechish: "):
+if st.button("Yechish 📝 "):
     #Kesmani teng ikkiga bo'lish usuli
     if a==0.00 and b==0.00 and c==0.00:
         st.write("Malumotlar to'liq kiritilmagan")
