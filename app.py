@@ -72,7 +72,7 @@ b = st.number_input("b: ")
 #Yechish usulini tanlash
 option = st.selectbox(
     "Yechish usulini tanla:",
-    ("1.Kesmani teng ikkiga bo'lish usul:", "2.Vatarlar usuli:", "3.Urunmalar usuli:","4.Urunma (madifiqatsiya) usuli:"))
+    ("1.Kesmani teng ikkiga bo'lish usul:", "2.Vatarlar usuli:", "3.Urunmalar usuli:","4.Urunma (madifiqatsiya) usuli:","Barcha usullarda hisobla"))
 kalit = option[0]
 
 
@@ -246,92 +246,105 @@ if st.button("Yechish: "):
             st.write('x=yechim mavjud emas!')
         
 #Yukoridagi barchasi hisoblash
-if st.button('Barchasini hisoblash'):
-    try:
-        if calculate_function(func,a)*calculate_function(func,b)<0:
-            try:
-                #Kesmani teng ikkiga bo'lish usuli
-                max_itaratsiya=100
-                itaratsiya=0
-                a1=a
-                b1=b
-                while abs(a1 - b1) > ϵ and itaratsiya<max_itaratsiya:
-                    c = (a1 + b1) / 2
-                    if calculate_function(func,c) == 0:
-                        break
-                    elif calculate_function(func,c) * calculate_function(func,a1) < 0:
-                        b1 = c
-                    else:
-                        a1 = c
-                    itaratsiya+=1
-                if itaratsiya>100:
-                    st.write("itaratsiya 100 dan katta bo'ldi")
-                    
-                st.write("1. x= ",c)
-                st.write("itaratsiya=",itaratsiya)
-            except:
-                st.write('1. x=yechim mavjud emas!')
-
-            try:
-                #Vatarlar yordamida hisoblash usuli
-                max_itaratsiya=100
-                itaratsiya=0
-                a2=a
-                b2=b
-                if calculate_function(func,a2)*calculate_function(func2,a2)>0:
-                    consta=a2
-                    xi=b2
-                else:
-                    consta=b2
-                    xi=a2
-                xn=xi-(calculate_function(func,xi)*(consta-xi))/(calculate_function(func,consta)-calculate_function(func,xi))
-                while abs(xn-xi)>ϵ:
-                    xi=xn
-                    xn=xi-(calculate_function(func,xi)*(consta-xi))/(calculate_function(func,consta)-calculate_function(func,xi))
-                    itaratsiya+=1
+    if kalit=='B':
+        try:
+            if calculate_function(func,a)*calculate_function(func,b)<0:
+                try:
+                    #Kesmani teng ikkiga bo'lish usuli
+                    max_itaratsiya=100
+                    itaratsiya=0
+                    a1=a
+                    b1=b
+                    while abs(a1 - b1) > ϵ and itaratsiya<max_itaratsiya:
+                        c = (a1 + b1) / 2
+                        if calculate_function(func,c) == 0:
+                            break
+                        elif calculate_function(func,c) * calculate_function(func,a1) < 0:
+                            b1 = c
+                        else:
+                            a1 = c
+                        itaratsiya+=1
                     if itaratsiya>100:
-                        st.write("itaratsiya 100 dan oshdi")
-                        break
-                
-                st.write('2. x=',xn)
-            except:
-                st.write('2. x=yechim mavjud emas!')
-            try:    
-                #Urunmalar yordamida hisoblash usuli
-                a3=a
-                b3=b
-                if calculate_function(func,a3)*calculate_function(func2,a3)>0:
-                    xi=a3
-                else:
-                    xi=b3
-                xn=xi-calculate_function(func,xi)/calculate_function(func1,xi)
-                while abs(xn-xi)>ϵ:
-                    xi=xn
+                        st.write("itaratsiyalar soni 100 dan oshdi")
+                        
+                    st.write("1. x= ",c)
+                    st.write("itaratsiya=",itaratsiya)
+                except:
+                    st.write('1. x=yechim mavjud emas!')
+    
+                try:
+                    #Vatarlar yordamida hisoblash usuli
+                    max_itaratsiya=100
+                    itaratsiya=0
+                    a2=a
+                    b2=b
+                    if calculate_function(func,a2)*calculate_function(func2,a2)>0:
+                        consta=a2
+                        xi=b2
+                    else:
+                        consta=b2
+                        xi=a2
+                    xn=xi-(calculate_function(func,xi)*(consta-xi))/(calculate_function(func,consta)-calculate_function(func,xi))
+                    while abs(xn-xi)>ϵ:
+                        xi=xn
+                        xn=xi-(calculate_function(func,xi)*(consta-xi))/(calculate_function(func,consta)-calculate_function(func,xi))
+                        itaratsiya+=1
+                        if itaratsiya>100:
+                            st.write("itaratsiya 100 dan oshdi")
+                            break
+                    
+                    st.write('2. x=',xn)
+                except:
+                    st.write('2. x=yechim mavjud emas!')
+                try:    
+                    #Urunmalar yordamida hisoblash usuli
+                    max_itaratsiya=100
+                    itaratsiya=0
+                    a3=a
+                    b3=b
+                    if calculate_function(func,a3)*calculate_function(func2,a3)>0:
+                        xi=a3
+                    else:
+                        xi=b3
                     xn=xi-calculate_function(func,xi)/calculate_function(func1,xi)
-                st.write('3. x=',xn)
-            except:
-                st.write('3. x=yechim mavjud emas!')
-
-            try:
-                #Urunma (modifiqatsiyasi) yordamida hisoblash usuli
-                a4=a
-                b4=b
-                if calculate_function(func,a4)*calculate_function(func2,a4)>0:
-                    xi=a4
-                else:
-                    xi=b4
-                x0=xi
-                xn=xi-calculate_function(func,xi)/calculate_function(func1,x0)
-                while abs(xn-xi)>ϵ:
-                    xi=xn
+                    while abs(xn-xi)>ϵ:
+                        xi=xn
+                        xn=xi-calculate_function(func,xi)/calculate_function(func1,xi)
+                        itaratsiya+=1
+                        
+                        if itaratsiya>100:
+                            st.write("itaratsiya 100 dan oshdi")
+                            break
+                    st.write('3. x=',xn)
+                except:
+                    st.write('3. x=yechim mavjud emas!')
+    
+                try:
+                    #Urunma (modifiqatsiyasi) yordamida hisoblash usuli
+                    max_itaratsiya=100
+                    itaratsiya=0
+                    a4=a
+                    b4=b
+                    if calculate_function(func,a4)*calculate_function(func2,a4)>0:
+                        xi=a4
+                    else:
+                        xi=b4
+                    x0=xi
                     xn=xi-calculate_function(func,xi)/calculate_function(func1,x0)
-                st.write('4. x=',xn)
-            except:
-                st.write('4. x=yechim mavjud emas!')
-        else:
-            st.write("Biror usulda yechim mavjud emas!")
-    except:
-        st.write('Funksiya mavjud emas!')
+                    while abs(xn-xi)>ϵ:
+                        xi=xn
+                        xn=xi-calculate_function(func,xi)/calculate_function(func1,x0)
+                        itaratsiya+=1
+                        if itaratsiya>100:
+                            st.write("itaratsiya 100 dan oshdi")
+                            break
+                    st.write('4. x=',xn)
+                except:
+                    st.write('4. x=yechim mavjud emas!')
+            else:
+                st.write("Biror usulda yechim mavjud emas!")
+        except:
+            st.write('Funksiya mavjud emas!')
 
 if st.button("Dastur haqida"):
     st.write("Maqsad: Hisoblash usullari fani uchun transsendent tenglamalarni")
