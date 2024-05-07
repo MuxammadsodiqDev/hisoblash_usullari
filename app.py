@@ -88,7 +88,7 @@ if st.button("Yechish: "):
                 max_itaratsiya=100
                 itaratsiya=0
                 
-                while abs(a - b) > ϵ and itaratsiya<max_itaratsiya:
+                while abs(a - b) > ϵ:
                     c = (a + b) / 2
                     x_list.append(c)
                     itaratsiya_list.append(itaratsiya+1)
@@ -100,6 +100,9 @@ if st.button("Yechish: "):
                     else:
                         a = c
                     itaratsiya+=1  
+
+                    if itaratsiya>100:
+                        st.write("itaratsiya 100 dan oshdi")
                     
                 st.write('x=',c)
                 st.write('itaratsiya= ',itaratsiya)
@@ -253,12 +256,14 @@ if st.button('Barchasini hisoblash'):
                     st.write("itaratsiya 100 dan katta bo'ldi")
                     
                 st.write("1. x= ",c)
-                st.write("itaratsiya=")
+                st.write("itaratsiya=",itaratsiya)
             except:
                 st.write('1. x=yechim mavjud emas!')
 
             try:
                 #Vatarlar yordamida hisoblash usuli
+                max_itaratsiya=100
+                itaratsiya=0
                 a2=a
                 b2=b
                 if calculate_function(func,a2)*calculate_function(func2,a2)>0:
@@ -271,6 +276,11 @@ if st.button('Barchasini hisoblash'):
                 while abs(xn-xi)>ϵ:
                     xi=xn
                     xn=xi-(calculate_function(func,xi)*(consta-xi))/(calculate_function(func,consta)-calculate_function(func,xi))
+                    itaratsiya+=1
+                    if itaratsiya>100:
+                        st.write("itaratsiya 100 dan oshdi")
+                        break
+                
                 st.write('2. x=',xn)
             except:
                 st.write('2. x=yechim mavjud emas!')
