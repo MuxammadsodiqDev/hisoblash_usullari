@@ -292,8 +292,8 @@ if st.button("Yechish 📝 "):
                         if itaratsiya>100:
                             st.write("itaratsiya 100 dan oshdi")
                             break
-                    
-                    st.write('2. x=',xn)
+                    st.write("2.Vatarlar yordamida hisoblash usuli:")
+                    st.write('x= ',xn)
                     st.write('itaratsiya= ',itaratsiya)
                 except:
                     st.write('2. x=yechim mavjud emas!')
@@ -316,14 +316,16 @@ if st.button("Yechish 📝 "):
                         if itaratsiya>100:
                             st.write("itaratsiya 100 dan oshdi")
                             break
-                    st.write('3. x=',xn)
+
+                    st.write("3.Urunmalar yordamida hisoblash usuli:")
+                    st.write('x= ',xn)
                     st.write('itaratsiya= ',itaratsiya)
                     
                 except:
                     st.write('3. x=yechim mavjud emas!')
     
                 try:
-                    #Urunma (modifiqatsiyasi) yordamida hisoblash usuli
+                    #Urunma (modifiqatsiyasi) usuli
                     max_itaratsiya=100
                     itaratsiya=0
                     a4=a
@@ -341,7 +343,9 @@ if st.button("Yechish 📝 "):
                         if itaratsiya>100:
                             st.write("itaratsiya 100 dan oshdi")
                             break
-                    st.write('4. x=',xn)
+
+                    st.write("4.Urunma (modifiqatsiyasi) usuli:")
+                    st.write('x= ',xn)
                     st.write('itaratsiya= ',itaratsiya)
                     
                 except:
