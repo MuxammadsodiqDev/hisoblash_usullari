@@ -113,7 +113,8 @@ if st.button("Yechish: "):
                     st.plotly_chart(fig)
                 else:
                     st.write('hato')
-                
+            else:
+                st.write('x=yechim mavjud emas!')
         except:
             st.write('x=yechim mavjud emas!')
                     
