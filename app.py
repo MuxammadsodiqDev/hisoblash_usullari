@@ -79,6 +79,9 @@ kalit = option[0]
 #Yechish
 if st.button("Yechish: "):
     #Kesmani teng ikkiga bo'lish usuli
+    if a==0.00 and b==0.00 and c==0.00:
+        st.write("Malumotlar to'liq kiritilmagan")
+    
     x_list=[]
     itaratsiya_list=[]
     if kalit=="1":
