@@ -250,7 +250,7 @@ if st.button('Barchasini hisoblash'):
                         a1 = c
                     itaratsiya+=1
                 if itaratsiya>100:
-                    st.write('itaratsiya 100 dan katta bo\'ldi')
+                    st.write("itaratsiya 100 dan katta bo'ldi")
                 st.write("1. x= ",c)
             except:
                 st.write('1. x=yechim mavjud emas!')
@@ -308,5 +308,8 @@ if st.button('Barchasini hisoblash'):
         st.write('Funksiya mavjud emas!')
 
 if st.button("Dastur haqida"):
-    st.write("maqsad: hisoblash usullari fanida transindate tenglamalarni\n 1.Kesmani teng ikki bo'lish usuli\n 2.Vatarlar usuli \n 3.Urunma usuli\n 4.Urunma madifiqatsiya usullari orqali kiritilgan oraliqda taqribiy yechimi hisoblaydi")
-    
+    st.write("maqsad: hisoblash usullari fanida transsendent tenglamalarni")
+    st.write("1.Kesmani teng ikki bo'lish usuli")
+    st.write("2.Vatarlar usuli")
+    st.write("3.Urunma usuli")
+    st.write("4.Urunma madifiqatsiya usullari orqali kiritilgan oraliqda taqribiy yechimi hisoblaydi")
