@@ -308,9 +308,5 @@ if st.button('Barchasini hisoblash'):
         st.write('Funksiya mavjud emas!')
 
 if st.button("Dastur haqida"):
-    st.write("maqsad: hisoblash usullari fanida transindate tenglamalarni
-    1.Kesmani teng ikki bo'lish usuli
-    2.Vatarlar usuli
-    3.Urunma usuli
-    4.Urunma madifiqatsiya usullari orqali kiritilgan oraliqda taqribiy yechimi hisoblaydi")
+    st.write("maqsad: hisoblash usullari fanida transindate tenglamalarni\n 1.Kesmani teng ikki bo'lish usuli\n 2.Vatarlar usuli \n 3.Urunma usuli\n 4.Urunma madifiqatsiya usullari orqali kiritilgan oraliqda taqribiy yechimi hisoblaydi")
     
