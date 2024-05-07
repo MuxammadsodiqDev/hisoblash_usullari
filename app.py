@@ -294,6 +294,7 @@ if st.button("Yechish: "):
                             break
                     
                     st.write('2. x=',xn)
+                    st.write('itaratsiya= ',itaratsiya)
                 except:
                     st.write('2. x=yechim mavjud emas!')
                 try:    
@@ -316,6 +317,8 @@ if st.button("Yechish: "):
                             st.write("itaratsiya 100 dan oshdi")
                             break
                     st.write('3. x=',xn)
+                    st.write('itaratsiya= ',itaratsiya)
+                    
                 except:
                     st.write('3. x=yechim mavjud emas!')
     
@@ -339,6 +342,8 @@ if st.button("Yechish: "):
                             st.write("itaratsiya 100 dan oshdi")
                             break
                     st.write('4. x=',xn)
+                    st.write('itaratsiya= ',itaratsiya)
+                    
                 except:
                     st.write('4. x=yechim mavjud emas!')
             else:
